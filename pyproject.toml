@@ -5,7 +5,13 @@ description = "Add your description here"
 authors = [
     { name = "shenrun", email = "shenrunsms@pku.edu.cn" }
 ]
-dependencies = []
+dependencies = [
+    "requests>=2.32.3",
+    "pyzmq>=26.0.3",
+    "protobuf>=5.27.1",
+    "pandas",
+    "pytz>=2024.1",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 

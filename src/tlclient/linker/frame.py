@@ -15,18 +15,19 @@ class FrameHeaderStatus(object):
 class FrameHeader(ctypes.Structure):
     _pack_ = 1
     _fields_ = [
-        ("status", ctypes.c_byte),
-        ("msg_type", ctypes.c_short),
-        ("length", ctypes.c_size_t),
-        ("nano", ctypes.c_int64),
-        ("source", ctypes.c_int),
-        ("req_id", ctypes.c_int64),
-        ("err_id", ctypes.c_int),
-        ("topic", ctypes.c_short),
+        ('status', ctypes.c_byte),
+        ('msg_type', ctypes.c_short),
+        ('length', ctypes.c_size_t),
+        ('nano', ctypes.c_int64),
+        ('source', ctypes.c_int),
+        ('req_id', ctypes.c_int64),
+        ('err_id', ctypes.c_int),
+        ('topic', ctypes.c_short),
     ]
 
 
 class Frame:
+
     SIZE_OF_HEADER = ctypes.sizeof(FrameHeader)
 
     def __init__(self, recv_s=None):
@@ -42,9 +43,7 @@ class Frame:
             self.buf_s = bytes(s)
         else:
             self.buf_s = s
-        self.frame = ctypes.cast(
-            ctypes.c_char_p(self.buf_s), ctypes.POINTER(FrameHeader)
-        ).contents
+        self.frame = ctypes.cast(ctypes.c_char_p(self.buf_s), ctypes.POINTER(FrameHeader)).contents
         self._data_addr = ctypes.addressof(self.frame) + self.SIZE_OF_HEADER
 
     # getters
@@ -119,7 +118,7 @@ class Frame:
     # set data
     def set_data(self, ctype_obj, length=None):
         if isinstance(ctype_obj, str):
-            self.set_in(ctype_obj)
+            self.set_string(ctype_obj)
             return
         length = None or ctypes.sizeof(ctype_obj)
         self.set_data_length(length)
@@ -132,7 +131,7 @@ class Frame:
         if self._data_addr == None:
             return None
         # return ctypes.cast(self._data_addr, ctypes.c_char_p).value
-        return self.buf_s[self.SIZE_OF_HEADER : self.frame.length]
+        return self.buf_s[self.SIZE_OF_HEADER:self.frame.length]
 
     def get_int64(self):
         if self._data_addr == None:

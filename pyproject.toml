@@ -1,14 +1,12 @@
 [project]
 name = "tlclient"
-version = "0.1.0"
+version = "0.1.1"
 description = "Add your description here"
-authors = [
-    { name = "shenrun", email = "shenrunsms@pku.edu.cn" }
-]
+authors = [{ name = "shenrun", email = "shenrunsms@pku.edu.cn" }]
 dependencies = [
     "requests>=2.32.3",
     "pyzmq>=26.0.3",
-    "protobuf>=5.27.1",
+    "protobuf<=3.20.0",
     "pandas",
     "pytz>=2024.1",
 ]

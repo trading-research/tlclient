@@ -16,6 +16,8 @@ MODULE_ERR_MSG_LENGTH = 81
 MODULE_TRADEID_LENGTH = 50
 MODULE_TRADINGDAY_LENGTH = 9
 
+STRING_MAX_LIMIT = 64
+
 ORDER_BOOK_SIZE = 10
 
 USER_RSA_KEY_DIR = "/shared/key/"
@@ -95,6 +97,7 @@ class MsgType(ReadableEnum, enum.IntEnum):
     )
     REQ_CREDIT_EXCESS_STOCK = message_pb.MsgType.MSG_TYPE_REQ_CREDIT_EXCESS_STOCK
     REQ_CREDIT_FUND_INFO = message_pb.MsgType.MSG_TYPE_REQ_CREDIT_FUND_INFO
+    REQ_INSTRUMENT = message_pb.MsgType.MSG_TYPE_REQ_INSTRUMENT
 
     RSP_ORDER_INSERT = message_pb.MsgType.MSG_TYPE_RSP_ORDER_INSERT
     RSP_ORDER_INSERT_BASKET = message_pb.MsgType.MSG_TYPE_RSP_ORDER_INSERT_BASKET
@@ -118,6 +121,7 @@ class MsgType(ReadableEnum, enum.IntEnum):
     RSP_CREDIT_EXTEND_DEBT_DATE = (
         message_pb.MsgType.MSG_TYPE_RSP_CREDIT_EXTEND_DEBT_DATE
     )
+    RSP_INSTRUMENT = message_pb.MsgType.MSG_TYPE_RSP_INSTRUMENT
     RSP_CREDIT_ACTIVE_CONTRACTS = (
         message_pb.MsgType.MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS
     )
@@ -133,6 +137,8 @@ class MsgType(ReadableEnum, enum.IntEnum):
         message_pb.MsgType.MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE
     )
     RTN_TRADE = message_pb.MsgType.MSG_TYPE_RTN_TRADE
+    RTN_INSTRUMENT = message_pb.MsgType.MSG_TYPE_RTN_INSTRUMENT
+    RTN_GATEWAY_INSTRUMENT = message_pb.MsgType.MSG_TYPE_GATEWAY_INSTRUMENT
 
     # market msg types
     MKT_DATA_TYPE = 500
@@ -259,6 +265,16 @@ class Direction(ReadableEnum):
     SELL = message_pb.SIDE_SELL  # deprecated, should use Side.SELL
 
 
+class HedgeFlag(ReadableEnum):
+    UNSPECIFIED = message_pb.HedgeFlag_UNSPECIFIED
+    Speculation = message_pb.HedgeFlag_UNSPECIFIED  # 投机
+    Arbitrage = message_pb.HedgeFlag_Arbitrage  # 套利
+    Hedge = message_pb.HedgeFlag_Hedge  # 套保
+    MarketMaker = message_pb.HedgeFlag_Hedge  # 做市商
+    SpecHedge = message_pb.HedgeFlag_SpecHedge  # 第一腿投机第二腿套保 大商所专用
+    HedgeSpec = message_pb.HedgeFlag_HedgeSpec  # 第一腿套保第二腿投机  大商所专用
+
+
 # deprecated, should use Direction.NET/LONG/SHORT
 class PosiDirection(ReadableEnum):
     NOT_AVAILABLE = message_pb.DIRECTION_UNSPECIFIED
@@ -316,18 +332,18 @@ class OrderStatus(ReadableEnum):
     PART_TRADE_QUEUEING = message_pb.ORDER_STATUS_PART_TRADE_QUEUEING
     PENDING_MAX = message_pb.ORDER_STATUS_PENDING_MAX
 
-    REJECTED = message_pb.ORDER_STATUS_REJECTED  # // router / gateway / exchange reject
+    REJECTED = message_pb.ORDER_STATUS_REJECTED  # # router / gateway / exchange reject
     REJECT_BY_ROUTER = message_pb.ORDER_STATUS_REJECT_BY_ROUTER
     REJECT_BY_GATEWAY = message_pb.ORDER_STATUS_REJECT_BY_GATEWAY
     REJECT_BY_EXCHANGE = message_pb.ORDER_STATUS_REJECT_BY_EXCHANGE
     REJECT_BY_RISK_MGR = message_pb.ORDER_STATUS_REJECT_BY_RISK_MGR
     CANCELED = (
         message_pb.ORDER_STATUS_CANCELED
-    )  # // cancelled, no mater all traded or partly traded
+    )  # # cancelled, no mater all traded or partly traded
     NO_TRADE_CANCELED = message_pb.ORDER_STATUS_NO_TRADE_CANCELED
     PART_TRADE_CANCELED = message_pb.ORDER_STATUS_PART_TRADE_CANCELED
     ALL_TRADED = message_pb.ORDER_STATUS_ALL_TRADED
-    # // some other middle status...
+    # # some other middle status...
     TO_CANCEL = message_pb.ORDER_STATUS_TO_CANCEL
 
 

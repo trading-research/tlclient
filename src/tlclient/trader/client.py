@@ -13,7 +13,7 @@ from tlclient.linker.fist import Fist
 from tlclient.linker.pb_msg import comm_pb, frame_pb
 from tlclient.linker.timer import Timer
 from tlclient.linker.utility import bytify
-from tlclient.trader.constant import (AssetType, BarType, ExchangeID, MarginMode,
+from tlclient.trader.constant import (AssetType, BarType, ExchangeID, HedgeFlag, MarginMode,
                              MsgType, OffsetFlag, OrderType, TradingStyle,
                              OrderStatus, FundTransType, Side)
 from tlclient.trader.data_manager.dm_client import DMClient
@@ -220,7 +220,7 @@ class Client(Fist):
             return -1
 
     def insert_algo_order_twap(self, tg_name, exchange, ticker, volume, direction, start_time, end_time, sec_interval, trading_style=TradingStyle.NEUTRAL, asset_type=AssetType.NOT_AVAILABLE):
-        return self.insert_algo_order(tg_name, exchange, ticker, volume, direction, OrderType.TWAP, start_time, end_time, sec_interval, trading_style, asset_type=asset_type)  # no extra args
+        return self.insert_algo_order(tg_name, exchange, ticker, volume, direction, OrderType.TWAP, start_time, end_time, sec_interval, trading_style, asset_type)  # no extra args
 
     def insert_basket_order(self, basket_name, tg_name, basket_order, child_order_type, **algo_args):
         basket_order.basket_name = basket_name
@@ -745,6 +745,93 @@ class Client(Fist):
         else:
             self.logger.error('[req_credit_excess_stock] error occurred (eid){} (tg){}'.format(err_id, tg_name))
             return -1
+        
+    def req_instrument(self, tg_name, ticker='', exchange=ExchangeID.NOT_AVAILABLE):
+        '''
+        请求查询合约
+
+        Parameters
+        ----------
+        tg_name : str
+            tg的名字
+        ticker : str
+            标的代码(可选) 不填获取所有可交易合约信息
+        exchange : ExchangeID
+            交易所代码(可选) 请参考constant.py
+
+        Returns
+        -------
+        -1 if failed, or req_id(int) if succeed
+        '''
+        req = message_pb.ReqInstrument()
+        req.account_id = tg_name
+        req.sender = self.fist_name
+        req.instrument_id = ticker
+        req.exchange_id = exchange
+        ret = self.req(self.trade_router, req, message_pb.MsgType.MSG_TYPE_REQ_INSTRUMENT, 0)
+        err_id = ret.get_err_id()
+        if err_id == 0:
+            return ret.get_req_id()
+        else:
+            self.logger.error('[req_instrument] error occurred (eid){} (tg){}'.format(err_id, tg_name))
+            return -1
+    
+    def req_commission(self, tg_name, ticker='', ):
+        '''
+        请求查询合约手续费
+
+        Parameters
+        ----------
+        tg_name : str
+            tg的名字
+        ticker : str
+            标的代码(可选) 不填获取持仓手续费
+
+
+        Returns
+        -------
+        -1 if failed, or req_id(int) if succeed
+        '''
+        req = message_pb.ReqCommission()
+        req.account_id = tg_name
+        req.sender = self.fist_name
+        req.instrument_id = ticker
+        ret = self.req(self.trade_router, req, message_pb.MsgType.MSG_TYPE_REQ_COMMISSION, 0)
+        err_id = ret.get_err_id()
+        if err_id == 0:
+            return ret.get_req_id()
+        else:
+            self.logger.error('[req_commisson] error occurred (eid){} (tg){}'.format(err_id, tg_name))
+            return -1
+
+    def req_margin_rate(self, tg_name, ticker='', hedge_flag=HedgeFlag.UNSPECIFIED):
+        '''
+        请求查询合约保证金
+
+        Parameters
+        ----------
+        tg_name : str
+            tg的名字
+        ticker : str
+            标的代码 不填获取所有持仓保证金
+        hedgeflag: HedgeFlag
+            投机套保标志 参考constant.py
+
+        Returns
+        -------
+        -1 if failed, or req_id(int) if succeed
+        '''
+        req = message_pb.ReqMarginRate()
+        req.account_id = tg_name
+        req.sender = self.fist_name
+        req.instrument_id = ticker
+        ret = self.req(self.trade_router, req, message_pb.MsgType.MSG_TYPE_REQ_MARGIN_RATE, 0)
+        err_id = ret.get_err_id()
+        if err_id == 0:
+            return ret.get_req_id()
+        else:
+            self.logger.error('[req_margin_rate] error occurred (eid){} (tg){}'.format(err_id, tg_name))
+            return -1
 
     # subscription
     def subscribe_snap(self, exchange, ticker):
@@ -874,6 +961,30 @@ class Client(Fist):
         处理资金划拨请求的回报
 
         obj: RspFundTransferInfo
+        '''
+        pass
+
+    def on_rsp_instrument(self, obj, frame_nano):
+        '''
+        处理合约信息请求的回报
+
+        obj: GatewayInstrument
+        '''
+        pass
+
+    def on_rsp_commission(self, obj, frame_nano):
+        '''
+        处理合约手续费的回报
+
+        obj: GatewayCommission
+        '''
+        pass
+
+    def on_rsp_margin_rate(self, obj, frame_nano):
+        '''
+        处理合约手续费的回报
+
+        obj: GatewayMarginRate
         '''
         pass
 
@@ -1082,6 +1193,18 @@ class Client(Fist):
             elif msg_type == message_pb.MsgType.MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE:
                 credit_extend_debt_date_obj = f.get_obj(message_pb.RtnCreditExtendDebtDate)
                 self.on_rtn_credit_extend_debt_date(credit_extend_debt_date_obj, frame_nano)
+
+            elif msg_type == message_pb.MsgType.MSG_TYPE_RSP_INSTRUMENT:
+                instrument_obj = f.get_obj(message_pb.GatewayInstrument)
+                self.on_rsp_instrument(instrument_obj, frame_nano)
+
+            elif msg_type == message_pb.MsgType.MSG_TYPE_RSP_COMMISSION:
+                commission_obj = f.get_obj(message_pb.GatewayCommission)
+                self.on_rsp_commission(commission_obj, frame_nano)
+
+            elif msg_type == message_pb.MsgType.MSG_TYPE_RSP_MARGIN_RATE:
+                margin_rate_obj = f.get_obj(message_pb.GatewayMarginRate)
+                self.on_rsp_margin_rate(margin_rate_obj, frame_nano)
 
             elif msg_type == message_pb.MsgType.MSG_TYPE_RSP_POSITION:
                 pos_obj = f.get_obj(message_pb.GatewayPosition)

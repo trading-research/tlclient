@@ -118,7 +118,7 @@ class PBEvent(Event):
     def set_data(self, msg):
         if isinstance(msg, str):
             self.set_string(msg)
-            return        
+            return
         self._frame.data = msg.SerializeToString()
 
     def set_string(self, msg: str):
@@ -126,7 +126,9 @@ class PBEvent(Event):
 
     @property
     def buf(self):
-        return (FrameHeaderStatus.PB).to_bytes(1, byteorder='little') + self._mem_buffer.SerializeToString()
+        return (FrameHeaderStatus.PB).to_bytes(
+            1, byteorder="little"
+        ) + self._mem_buffer.SerializeToString()
 
 
 class FrameEvent(Event):
@@ -162,7 +164,7 @@ class BatchFrameEvent(Event):
     def __init__(self, msg: bytes):
         self._buffer = msg
         self._pos = MemBuffer.HEADER_LENGTH
-        self._frame = Frame(self._buffer[self._pos:])
+        self._frame = Frame(self._buffer[self._pos :])
 
     def get_obj(self, MSG_TYPE):
         return self._frame.get_obj(MSG_TYPE)
@@ -189,5 +191,5 @@ class BatchFrameEvent(Event):
         yield self
         while self._buffer[self._pos] == FrameHeaderStatus.HAS_NEXT:
             self._pos += self._frame.get_length()
-            self._frame = Frame(self._buffer[self._pos:])
+            self._frame = Frame(self._buffer[self._pos :])
             yield self

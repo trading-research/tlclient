@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='linker.trader',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\rmessage.proto\x12\rlinker.trader\x1a\x1fgoogle/protobuf/timestamp.proto\"\x91\x05\n\x0eReqOrderInsert\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\x10\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0boffset_flag\x18\x08 \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12,\n\norder_type\x18\t \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\n \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0b \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\x0c \x01(\t\x12\x13\n\x0b\x65ntrust_vol\x18\r \x01(\x01\x12\x15\n\rentrust_price\x18\x0e \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x0f \x01(\x01\x12.\n\x0bmargin_mode\x18\x10 \x01(\x0e\x32\x19.linker.trader.MarginMode\x12\x12\n\nlever_rate\x18\x11 \x01(\x05\x12\x13\n\x0b\x63ontract_id\x18\x12 \x01(\t\x12\x32\n\nrepay_type\x18\x13 \x01(\x0e\x32\x1e.linker.trader.CreditRepayType\x12\x11\n\talgo_type\x18\x14 \x01(\r\x12\x12\n\nalgo_param\x18\x15 \x01(\t\x12)\n\x08\x63urrency\x18\x16 \x01(\x0e\x32\x17.linker.trader.Currency\"j\n\x0eRspOrderInsert\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"_\n\x0eReqOrderCancel\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x0e\n\x06req_id\x18\x02 \x01(\x06\x12\x10\n\x08order_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63\x61ncel_inserted\x18\x04 \x01(\x08\"z\n\x0eRspOrderCancel\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x10\n\x08order_id\x18\x02 \x01(\x06\x12\x11\n\torder_ref\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x12\n\naccount_id\x18\x06 \x01(\t\"\xa6\x01\n\x12ReqCreditCashRepay\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\x12\x0e\n\x06\x61mount\x18\x05 \x01(\x01\x12\x13\n\x0b\x63ontract_id\x18\x06 \x01(\t\x12\x32\n\nrepay_type\x18\x07 \x01(\x0e\x32\x1e.linker.trader.CreditRepayType\"n\n\x12RspCreditCashRepay\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"\xba\x01\n\x12RtnCreditCashRepay\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x16\n\x0erequest_amount\x18\x06 \x01(\x01\x12\x19\n\x11\x63\x61sh_repay_amount\x18\x07 \x01(\x01\x12\x13\n\x0b\x63ontract_id\x18\x08 \x01(\t\"{\n\x17ReqCreditExtendDebtDate\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x13\n\x0b\x63ontract_id\x18\x04 \x01(\t\x12\x12\n\ndefer_days\x18\x05 \x01(\r\"s\n\x17RspCreditExtendDebtDate\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"\xfb\x01\n\x17RtnCreditExtendDebtDate\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x13\n\x0b\x63ontract_id\x18\x06 \x01(\t\x12>\n\x0boper_status\x18\x07 \x01(\x0e\x32).linker.trader.CreditDebtExtendOperStatus\x12-\n\toper_time\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xcd\x07\n\x08RtnOrder\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x10\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\x10\x12\x10\n\x08\x66ront_id\x18\x07 \x01(\x05\x12\x12\n\nsession_id\x18\x08 \x01(\x11\x12)\n\x08\x65xchange\x18\t \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0boffset_flag\x18\n \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12\x30\n\x0corder_status\x18\x0b \x01(\x0e\x32\x1a.linker.trader.OrderStatus\x12,\n\norder_type\x18\x0c \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\r \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0e \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\x0f \x01(\t\x12\x12\n\ntraded_vol\x18\x10 \x01(\x01\x12\x14\n\x0ctraded_price\x18\x11 \x01(\x01\x12\x12\n\ntraded_amt\x18\x12 \x01(\x01\x12/\n\x0b\x63reate_time\x18\x13 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\trecv_time\x18\x14 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x15 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x65ntrust_vol\x18\x16 \x01(\x01\x12\x15\n\rentrust_price\x18\x17 \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x18 \x01(\x01\x12\x0f\n\x07\x66rz_amt\x18\x19 \x01(\x01\x12\x0f\n\x07\x66rz_fee\x18\x1a \x01(\x01\x12\x12\n\nextra_info\x18\x1b \x01(\t\x12.\n\x0bmargin_mode\x18\x1c \x01(\x0e\x32\x19.linker.trader.MarginMode\x12.\n\x0bsource_type\x18\x1d \x01(\x0e\x32\x19.linker.trader.SourceType\x12\x12\n\nlever_rate\x18\x1e \x01(\x05\x12\x0e\n\x06\x65rr_id\x18\x1f \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18  \x01(\t\x12\x15\n\rcancel_err_id\x18! \x01(\x11\x12\x16\n\x0e\x63\x61ncel_err_msg\x18\" \x01(\t\"\xf9\x05\n\x08RtnTrade\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x11\n\ttrade_ref\x18\x04 \x01(\t\x12\x10\n\x08order_id\x18\x05 \x01(\x10\x12\x11\n\torder_ref\x18\x06 \x01(\t\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12*\n\texec_role\x18\x08 \x01(\x0e\x32\x17.linker.trader.ExecRole\x12.\n\x0boffset_flag\x18\t \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12,\n\norder_type\x18\n \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\x0b \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0c \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\r \x01(\t\x12\x12\n\ntraded_vol\x18\x0e \x01(\x01\x12\x14\n\x0ctraded_price\x18\x0f \x01(\x01\x12\x12\n\ntraded_amt\x18\x10 \x01(\x01\x12\x12\n\ncommission\x18\x11 \x01(\x01\x12\x13\n\x0btrading_day\x18\x12 \x01(\t\x12-\n\trecv_time\x18\x13 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\ntrade_time\x18\x14 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x65ntrust_vol\x18\x15 \x01(\x01\x12\x15\n\rentrust_price\x18\x16 \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x17 \x01(\x01\x12)\n\x08\x63urrency\x18\x18 \x01(\x0e\x32\x17.linker.trader.Currency\x12.\n\x0bsource_type\x18\x19 \x01(\x0e\x32\x19.linker.trader.SourceType\"\xa5\x01\n\rGatewayOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x11\n\tfully_set\x18\x06 \x01(\x08\x12\'\n\x06orders\x18\x07 \x03(\x0b\x32\x17.linker.trader.RtnOrder\"0\n\x0cReqOrderInfo\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x0e\n\x06sender\x18\x02 \x01(\t\"V\n\x0bReqPosition\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xbe\x05\n\x0cPositionInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12+\n\tdirection\x18\x03 \x01(\x0e\x32\x18.linker.trader.Direction\x12)\n\x08\x65xchange\x18\x04 \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0bmargin_mode\x18\x05 \x01(\x0e\x32\x19.linker.trader.MarginMode\x12\x32\n\rsecurity_type\x18\x06 \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12\x0e\n\x06symbol\x18\x07 \x01(\t\x12\x10\n\x08position\x18\x08 \x01(\x01\x12\x0e\n\x06yd_pos\x18\t \x01(\x01\x12\x11\n\tavail_pos\x18\n \x01(\x01\x12\x0f\n\x07\x66rz_pos\x18\x0b \x01(\x01\x12\x10\n\x08pos_cost\x18\x0c \x01(\x01\x12\x10\n\x08\x62orrowed\x18\r \x01(\x01\x12\x10\n\x08interest\x18\x0e \x01(\x01\x12\x11\n\tliq_price\x18\x0f \x01(\x01\x12\x0e\n\x06margin\x18\x10 \x01(\x01\x12\x11\n\tmkt_value\x18\x11 \x01(\x01\x12\x11\n\trisk_rate\x18\x12 \x01(\x01\x12\x0b\n\x03pnl\x18\x13 \x01(\x01\x12\x14\n\x0crealized_pnl\x18\x14 \x01(\x01\x12\x16\n\x0eunrealized_pnl\x18\x15 \x01(\x01\x12-\n\trecv_time\x18\x16 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bsource_time\x18\x17 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\x0bsource_type\x18\x18 \x01(\x0e\x32\x19.linker.trader.SourceType\x12)\n\x08\x63urrency\x18\x19 \x01(\x0e\x32\x17.linker.trader.Currency\"\x9b\x01\n\x0fGatewayPosition\x12\x0e\n\x06pos_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12.\n\tpositions\x18\x06 \x03(\x0b\x32\x1b.linker.trader.PositionInfo\"U\n\nReqAccount\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xaf\x04\n\nRspAccount\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x11\n\tavail_amt\x18\x04 \x01(\x01\x12\x0f\n\x07\x62\x61lance\x18\x05 \x01(\x01\x12\x0e\n\x06\x65quity\x18\x06 \x01(\x01\x12\x0f\n\x07\x66rz_amt\x18\x07 \x01(\x01\x12\x12\n\nfrz_margin\x18\x08 \x01(\x01\x12\x11\n\tmkt_value\x18\t \x01(\x01\x12\x12\n\ncommission\x18\n \x01(\x01\x12\x0f\n\x07\x64\x65posit\x18\x0b \x01(\x01\x12\x10\n\x08withdraw\x18\x0c \x01(\x01\x12\x0b\n\x03pnl\x18\r \x01(\x01\x12\x14\n\x0crealized_pnl\x18\x0e \x01(\x01\x12\x16\n\x0eunrealized_pnl\x18\x0f \x01(\x01\x12.\n\x0bsource_type\x18\x10 \x01(\x0e\x32\x19.linker.trader.SourceType\x12)\n\x08\x63urrency\x18\x11 \x01(\x0e\x32\x17.linker.trader.Currency\x12*\n\tfund_type\x18\x12 \x01(\x0e\x32\x17.linker.trader.FundType\x12.\n\trecv_time\x18\xa0\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\x0bsource_time\x18\xa1\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x06\x65rr_id\x18\xe8\x07 \x01(\x11\x12\x10\n\x07\x65rr_msg\x18\xe9\x07 \x01(\t\"Z\n\x0fReqActiveOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"z\n\x15ReqCancelActiveOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\x12\x18\n\x10\x61\x63tive_orders_id\x18\x05 \x01(\x12\"L\n\x15RspCancelActiveOrders\x12\x0e\n\x06\x65rr_id\x18\x01 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x02 \x01(\t\x12\x12\n\naccount_id\x18\x03 \x01(\t\"Y\n\x0eReqTradesToday\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xa5\x01\n\rGatewayTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x11\n\tfully_set\x18\x06 \x01(\x08\x12\'\n\x06trades\x18\x07 \x03(\x0b\x32\x17.linker.trader.RtnTrade\"[\n\x10ReqHistoryTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\x95\x01\n\x10RspHistoryTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\'\n\x06trades\x18\x06 \x03(\x0b\x32\x17.linker.trader.RtnTrade\"\"\n\x0cReqParamInfo\x12\x12\n\nfile_names\x18\x01 \x03(\t\"\x9f\x01\n\x0cRspParamInfo\x12:\n\x0bparam_infos\x18\x01 \x03(\x0b\x32%.linker.trader.RspParamInfo.ParamInfo\x12\x13\n\x0b\x66ile_status\x18\x02 \x01(\t\x1a>\n\tParamInfo\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\x12\r\n\x05group\x18\x03 \x01(\t\"\xb9\x01\n\x0fReqFundTransfer\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x14\n\x0c\x66und_account\x18\x04 \x01(\t\x12\x10\n\x08password\x18\x05 \x01(\t\x12\x0e\n\x06\x61mount\x18\x06 \x01(\x01\x12\x35\n\x0f\x66und_trans_type\x18\x07 \x01(\x0e\x32\x1c.linker.trader.FundTransType\"a\n\x13ReqFundTransferInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x11\n\tserial_id\x18\x04 \x01(\x04\"\xdb\x01\n\x13\x46undTransferInfoOne\x12\x11\n\tserial_id\x18\x01 \x01(\x04\x12\x35\n\x0f\x66und_trans_type\x18\x02 \x01(\x0e\x32\x1c.linker.trader.FundTransType\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x37\n\x10\x66und_oper_status\x18\x04 \x01(\x0e\x32\x1d.linker.trader.FundOperStatus\x12\x31\n\rtransfer_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xd1\x01\n\x13RspFundTransferInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x31\n\x05infos\x18\x06 \x03(\x0b\x32\".linker.trader.FundTransferInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xca\x01\n\x1cReqFundTransFromBankToFuture\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0f\n\x07\x62\x61nk_id\x18\x04 \x01(\t\x12\x11\n\tbroker_id\x18\x05 \x01(\t\x12\x14\n\x0c\x62\x61nk_account\x18\x06 \x01(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x07 \x01(\t\x12\x10\n\x08password\x18\x08 \x01(\t\x12\x14\n\x0ctrade_amount\x18\t \x01(\x01\"\xc5\x02\n\x1c\x46undTransFromBankToFutureOne\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0f\n\x07\x62\x61nk_id\x18\x02 \x01(\t\x12\x11\n\tbroker_id\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nk_serial\x18\x04 \x01(\t\x12\x14\n\x0cplate_serial\x18\x05 \x01(\x12\x12\x13\n\x0b\x63ustom_name\x18\x06 \x01(\t\x12\x15\n\rfuture_serial\x18\x07 \x01(\x12\x12\x14\n\x0ctrade_amount\x18\x08 \x01(\x01\x12\x0b\n\x03tid\x18\t \x01(\x12\x12@\n\x0ftransfer_status\x18\n \x01(\x0e\x32\'.linker.trader.BankFutureTransferStatus\x12\x31\n\rtransfer_time\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xe3\x01\n\x1cRspFundTransFromBankToFuture\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12:\n\x05infos\x18\x06 \x03(\x0b\x32+.linker.trader.FundTransFromBankToFutureOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"U\n\nReqIPOInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xc4\x01\n\nIPOInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x13\n\x0bsymbol_name\x18\x03 \x01(\t\x12\x30\n\x0bsymbol_type\x18\x04 \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12\r\n\x05price\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x17\n\x0fqty_upper_limit\x18\x07 \x01(\x05\"\xbf\x01\n\nRspIPOInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12(\n\x05infos\x18\x06 \x03(\x0b\x32\x19.linker.trader.IPOInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"Z\n\x0fReqIPOQuotaInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"e\n\x0fIPOQuotaInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x15\n\rtech_quantity\x18\x03 \x01(\x05\"\xc9\x01\n\x0fRspIPOQuotaInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12-\n\x05infos\x18\x06 \x03(\x0b\x32\x1e.linker.trader.IPOQuotaInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"L\n\x11ReqCreditFundInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xd7\x01\n\x11RspCreditFundInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x19\n\x11maintenance_ratio\x18\x06 \x01(\x01\x12\x11\n\tall_asset\x18\x07 \x01(\x01\x12\x10\n\x08\x61ll_debt\x18\x08 \x01(\x01\x12\x16\n\x0eline_of_credit\x18\t \x01(\x01\x12\x10\n\x08guaranty\x18\n \x01(\x01\"S\n\x18ReqCreditActiveContracts\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xc2\x04\n\x0e\x43reditContract\x12\x38\n\rcontract_type\x18\x01 \x01(\x0e\x32!.linker.trader.CreditContractType\x12\x38\n\rcontract_prop\x18\x02 \x01(\x0e\x32!.linker.trader.CreditContractProp\x12\x13\n\x0b\x63ontract_id\x18\x03 \x01(\t\x12\x13\n\x0bposition_id\x18\x04 \x01(\t\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12<\n\x0f\x63ontract_status\x18\x06 \x01(\x0e\x32#.linker.trader.CreditContractStatus\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x08 \x01(\t\x12.\n\norder_date\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nvalue_date\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_date\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\rorig_end_date\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10remain_principal\x18\r \x01(\x01\x12\x12\n\nremain_qty\x18\x0e \x01(\x03\x12\x17\n\x0fremain_interest\x18\x0f \x01(\x01\"\xd1\x01\n\x18RspCreditActiveContracts\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12,\n\x05infos\x18\x06 \x03(\x0b\x32\x1d.linker.trader.CreditContract\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x8f\x01\n\x19ReqCreditTickerAssignInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0e\n\x06symbol\x18\x04 \x01(\t\x12)\n\x08\x65xchange\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\"\x8f\x01\n\x19\x43reditTickerAssignInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x11\n\tlimit_qty\x18\x03 \x01(\x03\x12\x10\n\x08left_qty\x18\x04 \x01(\x03\x12\x12\n\nfrozen_qty\x18\x05 \x01(\x03\"\xdd\x01\n\x19RspCreditTickerAssignInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x37\n\x05infos\x18\x06 \x03(\x0b\x32(.linker.trader.CreditTickerAssignInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x8a\x01\n\x14ReqCreditExcessStock\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0e\n\x06symbol\x18\x04 \x01(\t\x12)\n\x08\x65xchange\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\"\x8e\x01\n\x14\x43reditExcessStockOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x1d\n\x15transferable_quantity\x18\x03 \x01(\x03\x12\x1c\n\x14transferred_quantity\x18\x04 \x01(\x03\"\xd4\x01\n\x14RspCreditExcessStock\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x33\n\x06stocks\x18\x06 \x03(\x0b\x32#.linker.trader.CreditExcessStockOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp*\xaa\x11\n\x07MsgType\x12\x18\n\x14MSG_TYPE_UNSPECIFIED\x10\x00\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_INSERT\x10\xc8\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_NEED_RM\x10\xc9\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_PASS_RM\x10\xca\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_FAIL_RM\x10\xcb\x01\x12%\n MSG_TYPE_REQ_ORDER_INSERT_BASKET\x10\xcc\x01\x12 \n\x1bMSG_TYPE_REQ_ORDER_INSERT_J\x10\xcd\x01\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_CANCEL\x10\xd2\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_NEED_RM\x10\xd3\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_PASS_RM\x10\xd4\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_FAIL_RM\x10\xd5\x01\x12 \n\x1bMSG_TYPE_REQ_ORDER_CANCEL_J\x10\xd6\x01\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_STATUS\x10\xdc\x01\x12\x1a\n\x15MSG_TYPE_REQ_POSITION\x10\xe6\x01\x12\x19\n\x14MSG_TYPE_REQ_ACCOUNT\x10\xf0\x01\x12\x1c\n\x17MSG_TYPE_REQ_ORDER_INFO\x10\xfa\x01\x12\x1f\n\x1aMSG_TYPE_REQ_ACTIVE_ORDERS\x10\x84\x02\x12&\n!MSG_TYPE_REQ_CANCEL_ACTIVE_ORDERS\x10\x85\x02\x12 \n\x1bMSG_TYPE_REQ_HISTORY_TRADES\x10\x8e\x02\x12\x1e\n\x19MSG_TYPE_REQ_TRADES_TODAY\x10\x8f\x02\x12!\n\x1cMSG_TYPE_REQ_FUND_TRANS_INFO\x10\x93\x02\x12\x1c\n\x17MSG_TYPE_REQ_FUND_TRANS\x10\x94\x02\x12\x1a\n\x15MSG_TYPE_REQ_IPO_INFO\x10\x95\x02\x12 \n\x1bMSG_TYPE_REQ_IPO_QUOTA_INFO\x10\x96\x02\x12\x30\n+MSG_TYPE_REQ_FUND_TRANS_FROM_BANK_TO_FUTURE\x10\x97\x02\x12#\n\x1eMSG_TYPE_REQ_CREDIT_CASH_REPAY\x10\x98\x02\x12)\n$MSG_TYPE_REQ_CREDIT_EXTEND_DEBT_DATE\x10\x99\x02\x12)\n$MSG_TYPE_REQ_CREDIT_ACTIVE_CONTRACTS\x10\x9a\x02\x12+\n&MSG_TYPE_REQ_CREDIT_TICKER_ASSIGN_INFO\x10\x9b\x02\x12%\n MSG_TYPE_REQ_CREDIT_EXCESS_STOCK\x10\x9c\x02\x12\"\n\x1dMSG_TYPE_REQ_CREDIT_FUND_INFO\x10\x9d\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_INSERT\x10\xac\x02\x12%\n MSG_TYPE_RSP_ORDER_INSERT_BASKET\x10\xaf\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_CANCEL\x10\xb6\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_STATUS\x10\xc0\x02\x12\x1a\n\x15MSG_TYPE_RSP_POSITION\x10\xca\x02\x12\x19\n\x14MSG_TYPE_RSP_ACCOUNT\x10\xd4\x02\x12\x1c\n\x17MSG_TYPE_RSP_ORDER_INFO\x10\xde\x02\x12\x1f\n\x1aMSG_TYPE_RSP_ACTIVE_ORDERS\x10\xe8\x02\x12&\n!MSG_TYPE_RSP_CANCEL_ACTIVE_ORDERS\x10\xe9\x02\x12 \n\x1bMSG_TYPE_RSP_HISTORY_TRADES\x10\xf2\x02\x12\x1e\n\x19MSG_TYPE_RSP_TRADES_TODAY\x10\xf3\x02\x12!\n\x1cMSG_TYPE_RSP_FUND_TRANS_INFO\x10\xf7\x02\x12\x1c\n\x17MSG_TYPE_RSP_FUND_TRANS\x10\xf8\x02\x12\x1a\n\x15MSG_TYPE_RSP_IPO_INFO\x10\xf9\x02\x12 \n\x1bMSG_TYPE_RSP_IPO_QUOTA_INFO\x10\xfa\x02\x12\x30\n+MSG_TYPE_RSP_FUND_TRANS_FROM_BANK_TO_FUTURE\x10\xfb\x02\x12#\n\x1eMSG_TYPE_RSP_CREDIT_CASH_REPAY\x10\xfc\x02\x12)\n$MSG_TYPE_RSP_CREDIT_EXTEND_DEBT_DATE\x10\xfd\x02\x12)\n$MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS\x10\xfe\x02\x12+\n&MSG_TYPE_RSP_CREDIT_TICKER_ASSIGN_INFO\x10\xff\x02\x12%\n MSG_TYPE_RSP_CREDIT_EXCESS_STOCK\x10\x80\x03\x12\"\n\x1dMSG_TYPE_RSP_CREDIT_FUND_INFO\x10\x81\x03\x12\x17\n\x12MSG_TYPE_RTN_ORDER\x10\x90\x03\x12#\n\x1eMSG_TYPE_RTN_CREDIT_CASH_REPAY\x10\x92\x03\x12)\n$MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE\x10\x93\x03\x12\x17\n\x12MSG_TYPE_RTN_TRADE\x10\x9a\x03\x12\x1e\n\x1aMSG_TYPE_ORDER_TYPE_PREFIX\x10\x14\x12\x1d\n\x19MSG_TYPE_RTN_ORDER_PREFIX\x10(\x12\x1d\n\x19MSG_TYPE_RTN_TRADE_PREFIX\x10)\x12\x1f\n\x1aMSG_TYPE_PARAM_SERVER_TYPE\x10\xd8\x04\x12\x1c\n\x17MSG_TYPE_PARAM_REQ_INFO\x10\xd9\x04\x12\x1c\n\x17MSG_TYPE_PARAM_RSP_INFO\x10\xda\x04*\xa5\x15\n\x07\x45rrType\x12\x18\n\x14\x45RR_TYPE_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x45RR_TYPE_NO_ERR\x10\x00\x12 \n\x1b\x45RR_TYPE_INCOMPLETE_CONTENT\x10\x80\x08\x12\x1d\n\x18\x45RR_TYPE_INVALID_ACCOUNT\x10\x81\x08\x12 \n\x1b\x45RR_TYPE_JSON_BROKEN_FORMAT\x10\x82\x08\x12!\n\x1c\x45RR_TYPE_LACK_NECESSARY_INFO\x10\x83\x08\x12!\n\x1c\x45RR_TYPE_REQ_NOT_IMPLEMENTED\x10\x84\x08\x12\x1d\n\x18\x45RR_TYPE_ORDER_NOT_EXIST\x10\x85\x08\x12\x1f\n\x1a\x45RR_TYPE_ORDER_NOT_PENDING\x10\x86\x08\x12%\n ERR_TYPE_TRADE_GATEWAY_NOT_EXIST\x10\x87\x08\x12\"\n\x1d\x45RR_TYPE_PRE_REQ_ID_NOT_FOUND\x10\x88\x08\x12&\n!ERR_TYPE_PRE_REQ_ID_NOT_RESPONDED\x10\x89\x08\x12(\n#ERR_TYPE_CANCEL_IN_PROGRESS_ALREADY\x10\x8a\x08\x12\'\n\"ERR_TYPE_FAILED_ALGO_ORDER_PARSING\x10\x8b\x08\x12)\n$ERR_TYPE_FAILED_ALGO_ORDER_INSERTION\x10\x8c\x08\x12,\n\'ERR_TYPE_FAILED_ALGO_ORDER_CANCELLATION\x10\x8d\x08\x12*\n%ERR_TYPE_FAILED_CHILD_ORDER_INSERTION\x10\x8e\x08\x12!\n\x1c\x45RR_TYPE_BASKET_SERVER_EMPTY\x10\x8f\x08\x12+\n&ERR_TYPE_BASKET_SERVER_ORDER_NOT_FOUND\x10\x90\x08\x12\x1c\n\x17\x45RR_TYPE_FAILED_RMS_REQ\x10\x91\x08\x12$\n\x1f\x45RR_TYPE_RMS_RISK_RULE_VIOLATED\x10\x92\x08\x12\x1a\n\x15\x45RR_TYPE_NETWORK_DOWN\x10\x93\x08\x12\x16\n\x11\x45RR_TYPE_TIME_OUT\x10\x94\x08\x12&\n!ERR_TYPE_CONNECTION_BROKE_FINALLY\x10\x95\x08\x12\x1b\n\x16\x45RR_TYPE_OMS_NOT_FOUND\x10\x96\x08\x12\x1f\n\x1a\x45RR_TYPE_GATEWAY_NOT_FOUND\x10\x97\x08\x12\"\n\x1d\x45RR_TYPE_GATEWAY_DISCONNECTED\x10\x98\x08\x12$\n\x1f\x45RR_TYPE_RISK_MANAGER_NOT_FOUND\x10\x99\x08\x12%\n ERR_TYPE_BASKET_SERVER_NOT_FOUND\x10\x9a\x08\x12\x36\n1ERR_TYPE_RECONNECT_FAILURE_REQUESTS_NUMBER_EXCEED\x10\x80\x10\x12\x34\n/ERR_TYPE_RECONNECT_FAILURE_REQUESTS_RATE_EXCEED\x10\x81\x10\x12-\n(ERR_TYPE_RECONNECT_FAILURE_LOGIN_FAILURE\x10\x82\x10\x12\x30\n+ERR_TYPE_FRONT_DISCONNECTED_NETWORK_READING\x10\x83\x10\x12\x30\n+ERR_TYPE_FRONT_DISCONNECTED_NETWORK_WRITING\x10\x84\x10\x12\x32\n-ERR_TYPE_FRONT_DISCONNECTED_HEARTBEAT_TIMEOUT\x10\x85\x10\x12\x35\n0ERR_TYPE_FRONT_DISCONNECTED_SEND_HEATBEAT_FAILED\x10\x86\x10\x12.\n)ERR_TYPE_FRONT_DISCONNECTED_MESSAGE_ERROR\x10\x87\x10\x12(\n#ERR_TYPE_FRONT_DISCONNECTED_GENERAL\x10\x88\x10\x12\x38\n3ERR_TYPE_FRONT_DISCONNECTED_SUBSCRIBED_STREAM_ERROR\x10\x89\x10\x12>\n9ERR_TYPE_FRONT_DISCONNECTED_SUBSCRIBED_STREAM_INDEX_ERROR\x10\x8a\x10\x12\x38\n3ERR_TYPE_FRONT_DISCONNECTED_HEARTBEAT_MESSAGE_ERROR\x10\x8b\x10\x12 \n\x1b\x45RR_TYPE_GATEWAY_REQ_FAILED\x10\x80 \x12\x1f\n\x1a\x45RR_TYPE_FAILED_SEND_ORDER\x10\x81 \x12&\n!ERR_TYPE_FAILED_PARSE_EXCHANGE_ID\x10\x82 \x12$\n\x1f\x45RR_TYPE_FAILED_PARSE_DIRECTION\x10\x83 \x12%\n ERR_TYPE_FAILED_PARSE_ORDER_TYPE\x10\x84 \x12&\n!ERR_TYPE_FAILED_PARSE_OFFSET_FLAG\x10\x85 \x12&\n!ERR_TYPE_FAILED_SEND_ORDER_CANCEL\x10\x86 \x12!\n\x1c\x45RR_TYPE_ORDER_REF_NOT_FOUND\x10\x87 \x12$\n\x1f\x45RR_TYPE_UNSUPPOTED_EXCHANGE_ID\x10\x88 \x12!\n\x1c\x45RR_TYPE_FAILED_CANCEL_ORDER\x10\x89 \x12(\n#ERR_TYPE_FAILED_PARSE_SECURITY_TYPE\x10\x8a \x12*\n%ERR_TYPE_FAILED_PARSE_FUND_TRANS_TYPE\x10\x8b \x12&\n!ERR_TYPE_FAILED_GET_ACTIVE_ORDERS\x10\x8c \x12%\n ERR_TYPE_FAILED_GET_TRADES_TODAY\x10\x8d \x12\x37\n2ERR_TYPE_FAILED_CREDIT_CASH_REPAY_WITH_CONTRACT_ID\x10\x8e \x12:\n5ERR_TYPE_FAILED_CREDIT_CASH_REPAY_WITHOUT_CONTRACT_ID\x10\x8f \x12\x31\n,ERR_TYPE_FAILED_CREDIT_PARSE_CASH_REPAY_TYPE\x10\x90 \x12+\n&ERR_TYPE_FAILED_CREDIT_SEND_CASH_REPAY\x10\x91 \x12\x38\n3ERR_TYPE_FAILED_CREDIT_UNSUPPORTED_EXTEND_DEBT_DATE\x10\x92 \x12\x30\n+ERR_TYPE_FAILED_CREDIT_REQ_ACTIVE_CONTRACTS\x10\x93 \x12\x32\n-ERR_TYPE_FAILED_CREDIT_REQ_TICKER_ASSIGN_INFO\x10\x94 \x12?\n:ERR_TYPE_FAILED_CREDIT_UNSUPPORTED_REQ_CREDIT_EXCESS_STOCK\x10\x95 \x12#\n\x1e\x45RR_TYPE_FAILED_PARSE_CURRENCY\x10\x96 \x12&\n!ERR_TYPE_FAILED_PARSE_TIME_STRING\x10\x97 \x1a\x02\x10\x01*\xc7\x07\n\x08\x45xchange\x12\x18\n\x14\x45XCHANGE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x45XCHANGE_TRADITIONAL\x10\x64\x12\x10\n\x0c\x45XCHANGE_SSE\x10\x65\x12\x10\n\x0c\x45XCHANGE_SZE\x10\x66\x12\x0f\n\x0b\x45XCHANGE_HK\x10g\x12\x12\n\x0e\x45XCHANGE_CFFEX\x10h\x12\x10\n\x0c\x45XCHANGE_DCE\x10i\x12\x11\n\rEXCHANGE_SHFE\x10j\x12\x11\n\rEXCHANGE_CZCE\x10k\x12\x10\n\x0c\x45XCHANGE_SSC\x10l\x12\x10\n\x0c\x45XCHANGE_SEC\x10m\x12\x10\n\x0c\x45XCHANGE_BSE\x10n\x12\x11\n\rEXCHANGE_APEX\x10x\x12\x10\n\x0c\x45XCHANGE_BMD\x10y\x12\x11\n\rEXCHANGE_CBOE\x10z\x12\x14\n\x10\x45XCHANGE_CME_CBT\x10{\x12\x10\n\x0c\x45XCHANGE_CME\x10|\x12\x11\n\rEXCHANGE_DGCX\x10}\x12\x13\n\x0f\x45XCHANGE_DL_DCE\x10~\x12\x10\n\x0c\x45XCHANGE_DME\x10\x7f\x12\x13\n\x0e\x45XCHANGE_ECBOT\x10\x80\x01\x12\x12\n\rEXCHANGE_HKEX\x10\x81\x01\x12\x14\n\x0f\x45XCHANGE_ICE_SG\x10\x82\x01\x12\x11\n\x0c\x45XCHANGE_ICE\x10\x83\x01\x12\x11\n\x0c\x45XCHANGE_INE\x10\x84\x01\x12\x11\n\x0c\x45XCHANGE_JPX\x10\x85\x01\x12\x11\n\x0c\x45XCHANGE_KRX\x10\x86\x01\x12\x13\n\x0e\x45XCHANGE_LIFFE\x10\x87\x01\x12\x11\n\x0c\x45XCHANGE_LME\x10\x88\x01\x12\x13\n\x0e\x45XCHANGE_NYBOT\x10\x89\x01\x12\x14\n\x0f\x45XCHANGE_NY_INE\x10\x8a\x01\x12\x11\n\x0c\x45XCHANGE_SFE\x10\x8b\x01\x12\x12\n\rEXCHANGE_SGXQ\x10\x8c\x01\x12\x14\n\x0f\x45XCHANGE_TAIFEX\x10\x8d\x01\x12\x12\n\rEXCHANGE_TFEX\x10\x8e\x01\x12\x13\n\x0e\x45XCHANGE_TOCOM\x10\x8f\x01\x12\x14\n\x0f\x45XCHANGE_XEUREX\x10\x90\x01\x12\x14\n\x0f\x45XCHANGE_CRYPTO\x10\xc8\x01\x12\x13\n\x0e\x45XCHANGE_HUOBI\x10\xc9\x01\x12\x12\n\rEXCHANGE_OKEX\x10\xca\x01\x12\x15\n\x10\x45XCHANGE_BINANCE\x10\xcb\x01\x12\x14\n\x0f\x45XCHANGE_BITMEX\x10\xcc\x01\x12\x16\n\x11\x45XCHANGE_BITSTAMP\x10\xcd\x01\x12\x16\n\x11\x45XCHANGE_COINBASE\x10\xce\x01\x12\x14\n\x0f\x45XCHANGE_KRAKEN\x10\xcf\x01\x12\x13\n\x0e\x45XCHANGE_BYBIT\x10\xd0\x01\x12\x15\n\x10\x45XCHANGE_DERIBIT\x10\xd1\x01*\xdd\x03\n\x0cSecurityType\x12\x1d\n\x19SECURITY_TYPE_UNSPECIFIED\x10\x00\x12\x1d\n\x19SECURITY_TYPE_TRADITIONAL\x10\x64\x12\x17\n\x13SECURITY_TYPE_STOCK\x10\x65\x12\x18\n\x14SECURITY_TYPE_FUTURE\x10\x66\x12\x16\n\x12SECURITY_TYPE_BOND\x10g\x12\x1e\n\x1aSECURITY_TYPE_STOCK_OPTION\x10h\x12\x16\n\x12SECURITY_TYPE_FUND\x10i\x12\x1c\n\x18SECURITY_TYPE_TECH_STOCK\x10j\x12\x17\n\x13SECURITY_TYPE_INDEX\x10k\x12\x16\n\x12SECURITY_TYPE_REPO\x10l\x12\x15\n\x11SECURITY_TYPE_IPO\x10m\x12\x19\n\x14SECURITY_TYPE_CRYPTO\x10\xc8\x01\x12\x19\n\x14SECURITY_TYPE_C_SPOT\x10\xc9\x01\x12\x1b\n\x16SECURITY_TYPE_C_MARGIN\x10\xca\x01\x12\x1b\n\x16SECURITY_TYPE_C_FUTURE\x10\xcb\x01\x12\x19\n\x14SECURITY_TYPE_C_SWAP\x10\xcc\x01\x12\x1b\n\x16SECURITY_TYPE_C_OPTION\x10\xcd\x01*\xaf\x05\n\tOrderType\x12\x1a\n\x16ORDER_TYPE_UNSPECIFIED\x10\x00\x12!\n\x1dORDER_TYPE_PLAIN_ORDER_PREFIX\x10\n\x12 \n\x1cORDER_TYPE_ALGO_ORDER_PREFIX\x10\x14\x12\"\n\x1eORDER_TYPE_BASKET_ORDER_PREFIX\x10\x1e\x12\x14\n\x10ORDER_TYPE_PLAIN\x10\x64\x12\x14\n\x10ORDER_TYPE_LIMIT\x10\x65\x12\x15\n\x11ORDER_TYPE_MARKET\x10\x66\x12\x12\n\x0eORDER_TYPE_FAK\x10g\x12\x12\n\x0eORDER_TYPE_FOK\x10h\x12\x12\n\x0eORDER_TYPE_ANY\x10i\x12\x19\n\x15ORDER_TYPE_FAK_BEST_5\x10j\x12\x1b\n\x17ORDER_TYPE_FORWARD_BEST\x10k\x12\x1b\n\x17ORDER_TYPE_REVERSE_BEST\x10l\x12\x1e\n\x1aORDER_TYPE_BEST_5_OR_LIMIT\x10m\x12\x14\n\x0fORDER_TYPE_ALGO\x10\xc8\x01\x12\x14\n\x0fORDER_TYPE_TWAP\x10\xc9\x01\x12\x14\n\x0fORDER_TYPE_VWAP\x10\xca\x01\x12\x18\n\x13ORDER_TYPE_ZC_SMART\x10\xd2\x01\x12\x1c\n\x17ORDER_TYPE_KF_TWAP_PLUS\x10\xd3\x01\x12\x1c\n\x17ORDER_TYPE_KF_VWAP_PLUS\x10\xd4\x01\x12\x1d\n\x18ORDER_TYPE_JN_G_PXINLINE\x10\xd5\x01\x12\x1d\n\x18ORDER_TYPE_VOLUME_INLINE\x10\xd6\x01\x12\x18\n\x13ORDER_TYPE_FT_AIWAP\x10\xd7\x01\x12\x16\n\x11ORDER_TYPE_BASKET\x10\xac\x02\x12!\n\x1cORDER_TYPE_SINGLE_DAY_BASKET\x10\xad\x02*\xd0\x01\n\x04Side\x12\x14\n\x10SIDE_UNSPECIFIED\x10\x00\x12\x0c\n\x08SIDE_BUY\x10\x01\x12\r\n\tSIDE_SELL\x10\x02\x12\x16\n\x12SIDE_FINANCING_BUY\x10\x03\x12\x17\n\x13SIDE_FINANCING_SELL\x10\x04\x12\x17\n\x13SIDE_SECURITIES_BUY\x10\x05\x12\x18\n\x14SIDE_SECURITIES_SELL\x10\x06\x12\x15\n\x11SIDE_SURSTK_TRANS\x10\x07\x12\x1a\n\x16SIDE_STOCK_REPAY_STOCK\x10\x08*\xb1\x01\n\nOffsetFlag\x12\x1b\n\x17OFFSET_FLAG_UNSPECIFIED\x10\x00\x12\x14\n\x10OFFSET_FLAG_OPEN\x10\x01\x12\x15\n\x11OFFSET_FLAG_CLOSE\x10\x02\x12\x1b\n\x17OFFSET_FLAG_FORCE_CLOSE\x10\x03\x12\x1b\n\x17OFFSET_FLAG_CLOSE_TODAY\x10\x04\x12\x1f\n\x1bOFFSET_FLAG_CLOSE_YESTERDAY\x10\x05*\xce\x05\n\x0bOrderStatus\x12\x1c\n\x18ORDER_STATUS_UNSPECIFIED\x10\x00\x12\x18\n\x14ORDER_STATUS_UNKNOWN\x10\x01\x12\x15\n\x11ORDER_STATUS_INIT\x10\n\x12\x19\n\x15ORDER_STATUS_PROPOSED\x10\x64\x12 \n\x1cORDER_STATUS_PENDING_PROPOSE\x10\x65\x12\x1a\n\x16ORDER_STATUS_PROPOSING\x10\x66\x12\x1b\n\x16ORDER_STATUS_RESPONDED\x10\xc8\x01\x12\x1a\n\x15ORDER_STATUS_QUEUEING\x10\xac\x02\x12#\n\x1eORDER_STATUS_NO_TRADE_QUEUEING\x10\xad\x02\x12%\n ORDER_STATUS_PART_TRADE_QUEUEING\x10\xae\x02\x12\x1b\n\x16ORDER_STATUS_TO_CANCEL\x10\xf2\x02\x12\x1d\n\x18ORDER_STATUS_PENDING_MAX\x10\x8f\x03\x12\x1a\n\x15ORDER_STATUS_REJECTED\x10\x90\x03\x12\"\n\x1dORDER_STATUS_REJECT_BY_ROUTER\x10\x91\x03\x12#\n\x1eORDER_STATUS_REJECT_BY_GATEWAY\x10\x92\x03\x12$\n\x1fORDER_STATUS_REJECT_BY_EXCHANGE\x10\x93\x03\x12$\n\x1fORDER_STATUS_REJECT_BY_RISK_MGR\x10\x94\x03\x12\x1f\n\x1aORDER_STATUS_CANCEL_FAILED\x10\x95\x03\x12\x1a\n\x15ORDER_STATUS_CANCELED\x10\xd8\x04\x12#\n\x1eORDER_STATUS_NO_TRADE_CANCELED\x10\xd9\x04\x12%\n ORDER_STATUS_PART_TRADE_CANCELED\x10\xda\x04\x12\x1c\n\x17ORDER_STATUS_ALL_TRADED\x10\xbc\x05*\xdc\x01\n\x08\x43urrency\x12\x18\n\x14\x43URRENCY_UNSPECIFIED\x10\x00\x12\x10\n\x0c\x43URRENCY_CNY\x10\x01\x12\x10\n\x0c\x43URRENCY_USD\x10\x02\x12\x10\n\x0c\x43URRENCY_HKD\x10\x03\x12\x13\n\x0f\x43URRENCY_CRYPTO\x10\x64\x12\x10\n\x0c\x43URRENCY_BTC\x10\x65\x12\x10\n\x0c\x43URRENCY_ETH\x10\x66\x12\x10\n\x0c\x43URRENCY_EOS\x10g\x12\x10\n\x0c\x43URRENCY_XRP\x10h\x12\x10\n\x0c\x43URRENCY_LTC\x10i\x12\x11\n\rCURRENCY_USDT\x10j*\x80\x04\n\nSourceType\x12\x1b\n\x17SOURCE_TYPE_UNSPECIFIED\x10\x00\x12\x13\n\x0fSOURCE_TYPE_OMS\x10\x01\x12\x17\n\x13SOURCE_TYPE_GTW_API\x10\x64\x12\x13\n\x0fSOURCE_TYPE_CTP\x10\x65\x12\x15\n\x11SOURCE_TYPE_FEMAS\x10\x66\x12\x13\n\x0fSOURCE_TYPE_XTP\x10g\x12\x14\n\x10SOURCE_TYPE_TORA\x10h\x12\x14\n\x10SOURCE_TYPE_KPMS\x10i\x12\x13\n\x0fSOURCE_TYPE_UFX\x10j\x12\x13\n\x0fSOURCE_TYPE_LTS\x10k\x12\x14\n\x10SOURCE_TYPE_PBOX\x10l\x12\x12\n\x0eSOURCE_TYPE_DA\x10m\x12\x19\n\x14SOURCE_TYPE_GTW_FILE\x10\xc8\x01\x12\x1c\n\x17SOURCE_TYPE_XUNTOU_FILE\x10\xc9\x01\x12\x19\n\x14SOURCE_TYPE_GTW_EXCH\x10\xac\x02\x12\x16\n\x11SOURCE_TYPE_HUOBI\x10\xad\x02\x12\x15\n\x10SOURCE_TYPE_OKEX\x10\xae\x02\x12\x18\n\x13SOURCE_TYPE_BINANCE\x10\xaf\x02\x12\x17\n\x12SOURCE_TYPE_BITMEX\x10\xb0\x02\x12\x16\n\x11SOURCE_TYPE_BYBIT\x10\xb1\x02\x12\x18\n\x13SOURCE_TYPE_DERIBIT\x10\xb2\x02*O\n\x08\x45xecRole\x12\x19\n\x15\x45XEC_ROLE_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x45XEC_ROLE_MAKER\x10\x01\x12\x13\n\x0f\x45XEC_ROLE_TAKER\x10\x02*Y\n\nMarginMode\x12\x1b\n\x17MARGIN_MODE_UNSPECIFIED\x10\x00\x12\x17\n\x13MARGIN_MODE_CROSSED\x10\x01\x12\x15\n\x11MARGIN_MODE_FIXED\x10\x02*y\n\tDirection\x12\x19\n\x15\x44IRECTION_UNSPECIFIED\x10\x00\x12\x11\n\rDIRECTION_NET\x10\x01\x12\x12\n\x0e\x44IRECTION_LONG\x10\x02\x12\x13\n\x0f\x44IRECTION_SHORT\x10\x03\x12\x15\n\x11\x44IRECTION_COVERED\x10\x04*\x9e\x01\n\rFundTransType\x12\x1f\n\x1b\x46UND_TRANS_TYPE_UNSPECIFIED\x10\x00\x12\x17\n\x13\x46UND_TRANS_TYPE_OUT\x10\x01\x12\x16\n\x12\x46UND_TRANS_TYPE_IN\x10\x02\x12\x1d\n\x19\x46UND_TRANS_TYPE_INTER_OUT\x10\x03\x12\x1c\n\x18\x46UND_TRANS_TYPE_INTER_IN\x10\x04*\xae\x01\n\x0e\x46undOperStatus\x12 \n\x1c\x46UND_OPER_STATUS_UNSPECIFIED\x10\x00\x12\x1f\n\x1b\x46UND_OPER_STATUS_PROCESSING\x10\x01\x12\x1c\n\x18\x46UND_OPER_STATUS_SUCCESS\x10\x02\x12\x1b\n\x17\x46UND_OPER_STATUS_FAILED\x10\x03\x12\x1e\n\x1a\x46UND_OPER_STATUS_SUBMITTED\x10\x04*\x98\x01\n\x18\x42\x61nkFutureTransferStatus\x12+\n\'BANK_FUTURE_TRANSFER_STATUS_UNSPECIFIED\x10\x00\x12\'\n#BANK_FUTURE_TRANSFER_STATUS_SUCCESS\x10\x01\x12&\n\"BANK_FUTURE_TRANSFER_STATUS_FAILED\x10\x02*T\n\x08\x46undType\x12\x19\n\x15\x46UND_TYPE_UNSPECIFIED\x10\x00\x12\x12\n\x0e\x46UND_TYPE_QFII\x10\x01\x12\x19\n\x15\x46UND_TYPE_NORTH_BOUND\x10\x02*\xac\x02\n\x1a\x43reditDebtExtendOperStatus\x12.\n*CREDIT_DEBT_EXTEND_OPER_STATUS_UNSPECIFIED\x10\x00\x12*\n&CREDIT_DEBT_EXTEND_OPER_STATUS_UNKNOWN\x10\x01\x12-\n)CREDIT_DEBT_EXTEND_OPER_STATUS_PROCESSING\x10\x02\x12,\n(CREDIT_DEBT_EXTEND_OPER_STATUS_SUBMITTED\x10\x03\x12*\n&CREDIT_DEBT_EXTEND_OPER_STATUS_SUCCESS\x10\x04\x12)\n%CREDIT_DEBT_EXTEND_OPER_STATUS_FAILED\x10\x05*~\n\x0f\x43reditRepayType\x12!\n\x1d\x43REDIT_REPAY_TYPE_UNSPECIFIED\x10\x00\x12#\n\x1f\x43REDIT_REPAY_TYPE_BY_SETTLEMENT\x10\x01\x12#\n\x1f\x43REDIT_REPAY_TYPE_INTEREST_ONLY\x10\x02*\xa2\x01\n\x12\x43reditContractType\x12$\n CREDIT_CONTRACT_TYPE_UNSPECIFIED\x10\x00\x12 \n\x1c\x43REDIT_CONTRACT_TYPE_UNKNOWN\x10\x01\x12\x1f\n\x1b\x43REDIT_CONTRACT_TYPE_MARGIN\x10\x02\x12#\n\x1f\x43REDIT_CONTRACT_TYPE_SHORT_SALE\x10\x03*\xd2\x01\n\x12\x43reditContractProp\x12$\n CREDIT_CONTRACT_PROP_UNSPECIFIED\x10\x00\x12!\n\x1d\x43REDIT_CONTRACT_PROP_ORDINARY\x10\x01\x12 \n\x1c\x43REDIT_CONTRACT_PROP_SPECIAL\x10\x02\x12(\n$CREDIT_CONTRACT_PROP_ORDINARY_OTHERS\x10\x03\x12\'\n#CREDIT_CONTRACT_PROP_SPECIAL_OTHERS\x10\x04*\xdc\x01\n\x14\x43reditContractStatus\x12&\n\"CREDIT_CONTRACT_STATUS_UNSPECIFIED\x10\x00\x12\"\n\x1e\x43REDIT_CONTRACT_STATUS_UNKNOWN\x10\x01\x12+\n\'CREDIT_CONTRACT_STATUS_NOT_FULLY_REPAID\x10\x02\x12\'\n#CREDIT_CONTRACT_STATUS_FULLY_REPAID\x10\x03\x12\"\n\x1e\x43REDIT_CONTRACT_STATUS_OVERDUE\x10\x04\x62\x06proto3'
+  serialized_pb=b'\n\rmessage.proto\x12\rlinker.trader\x1a\x1fgoogle/protobuf/timestamp.proto\"\xbf\x05\n\x0eReqOrderInsert\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\x10\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0boffset_flag\x18\x08 \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12,\n\norder_type\x18\t \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\n \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0b \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\x0c \x01(\t\x12\x13\n\x0b\x65ntrust_vol\x18\r \x01(\x01\x12\x15\n\rentrust_price\x18\x0e \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x0f \x01(\x01\x12.\n\x0bmargin_mode\x18\x10 \x01(\x0e\x32\x19.linker.trader.MarginMode\x12\x12\n\nlever_rate\x18\x11 \x01(\x05\x12\x13\n\x0b\x63ontract_id\x18\x12 \x01(\t\x12\x32\n\nrepay_type\x18\x13 \x01(\x0e\x32\x1e.linker.trader.CreditRepayType\x12\x11\n\talgo_type\x18\x14 \x01(\r\x12\x12\n\nalgo_param\x18\x15 \x01(\t\x12)\n\x08\x63urrency\x18\x16 \x01(\x0e\x32\x17.linker.trader.Currency\x12,\n\nhedge_flag\x18\x17 \x01(\x0e\x32\x18.linker.trader.HedgeFlag\"j\n\x0eRspOrderInsert\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"_\n\x0eReqOrderCancel\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x0e\n\x06req_id\x18\x02 \x01(\x06\x12\x10\n\x08order_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63\x61ncel_inserted\x18\x04 \x01(\x08\"z\n\x0eRspOrderCancel\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x10\n\x08order_id\x18\x02 \x01(\x06\x12\x11\n\torder_ref\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x12\n\naccount_id\x18\x06 \x01(\t\"\xa6\x01\n\x12ReqCreditCashRepay\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\x12\x0e\n\x06\x61mount\x18\x05 \x01(\x01\x12\x13\n\x0b\x63ontract_id\x18\x06 \x01(\t\x12\x32\n\nrepay_type\x18\x07 \x01(\x0e\x32\x1e.linker.trader.CreditRepayType\"n\n\x12RspCreditCashRepay\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"\xba\x01\n\x12RtnCreditCashRepay\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x16\n\x0erequest_amount\x18\x06 \x01(\x01\x12\x19\n\x11\x63\x61sh_repay_amount\x18\x07 \x01(\x01\x12\x13\n\x0b\x63ontract_id\x18\x08 \x01(\t\"{\n\x17ReqCreditExtendDebtDate\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x13\n\x0b\x63ontract_id\x18\x04 \x01(\t\x12\x12\n\ndefer_days\x18\x05 \x01(\r\"\x8d\x01\n\rReqInstrument\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x15\n\rinstrument_id\x18\x04 \x01(\t\x12,\n\x0b\x65xchange_id\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\"_\n\rReqCommission\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x15\n\rinstrument_id\x18\x04 \x01(\t\"\xbb\x01\n\rReqMarginRate\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x15\n\rinstrument_id\x18\x04 \x01(\t\x12,\n\x0b\x65xchange_id\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\x12,\n\nhedge_flag\x18\x06 \x01(\x0e\x32\x18.linker.trader.HedgeFlag\"s\n\x17RspCreditExtendDebtDate\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"i\n\rRspInstrument\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x11\n\torder_ref\x18\x02 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x03 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x04 \x01(\t\x12\x12\n\naccount_id\x18\x05 \x01(\t\"\xfb\x01\n\x17RtnCreditExtendDebtDate\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x13\n\x0b\x63ontract_id\x18\x06 \x01(\t\x12>\n\x0boper_status\x18\x07 \x01(\x0e\x32).linker.trader.CreditDebtExtendOperStatus\x12-\n\toper_time\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xa0\x01\n\x11GatewayInstrument\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x31\n\x0binstruments\x18\x06 \x03(\x0b\x32\x1c.linker.trader.RtnInstrument\"\xa9\x02\n\rRtnInstrument\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x06\x12+\n\nExchangeID\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x10\n\x08OpenDate\x18\x06 \x01(\t\x12\x12\n\nExpireDate\x18\x07 \x01(\t\x12\x14\n\x0cInstrumentID\x18\x08 \x01(\t\x12\x19\n\x11long_margin_ratio\x18\t \x01(\x01\x12\x1a\n\x12short_margin_ratio\x18\n \x01(\x01\x12-\n\toper_time\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xa1\x01\n\x11GatewayCommission\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x32\n\x0b\x63ommissions\x18\x06 \x03(\x0b\x32\x1d.linker.trader.CommissionInfo\"\xcd\x02\n\x0e\x43ommissionInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12+\n\nExchangeID\x18\x04 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x14\n\x0cInstrumentID\x18\x05 \x01(\t\x12\x1b\n\x13open_ratio_by_money\x18\x06 \x01(\x01\x12\x1c\n\x14open_ratio_by_volume\x18\x07 \x01(\x01\x12\x1c\n\x14\x63lose_ratio_by_money\x18\x08 \x01(\x01\x12\x1d\n\x15\x63lose_ratio_by_volume\x18\t \x01(\x01\x12\"\n\x1a\x63lose_today_ratio_by_money\x18\n \x01(\x01\x12#\n\x1b\x63lose_today_ratio_by_volume\x18\x0b \x01(\x01\"\x9d\x01\n\x11GatewayMarginRate\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12.\n\x07margins\x18\x06 \x03(\x0b\x32\x1d.linker.trader.MarginRateInfo\"\xcb\x02\n\x0eMarginRateInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12+\n\nExchangeID\x18\x04 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x14\n\x0cInstrumentID\x18\x05 \x01(\t\x12\x1c\n\x14long_margin_by_money\x18\x06 \x01(\x01\x12\x1d\n\x15long_margin_by_volume\x18\x07 \x01(\x01\x12\x1d\n\x15short_margin_by_money\x18\x08 \x01(\x01\x12\x1e\n\x16short_margin_by_volume\x18\t \x01(\x01\x12\x13\n\x0bis_relative\x18\n \x01(\x08\x12,\n\nhedge_flag\x18\x0b \x01(\x0e\x32\x18.linker.trader.HedgeFlag\"\xcd\x07\n\x08RtnOrder\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x10\n\x08order_id\x18\x04 \x01(\x10\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\x10\x12\x10\n\x08\x66ront_id\x18\x07 \x01(\x05\x12\x12\n\nsession_id\x18\x08 \x01(\x11\x12)\n\x08\x65xchange\x18\t \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0boffset_flag\x18\n \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12\x30\n\x0corder_status\x18\x0b \x01(\x0e\x32\x1a.linker.trader.OrderStatus\x12,\n\norder_type\x18\x0c \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\r \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0e \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\x0f \x01(\t\x12\x12\n\ntraded_vol\x18\x10 \x01(\x01\x12\x14\n\x0ctraded_price\x18\x11 \x01(\x01\x12\x12\n\ntraded_amt\x18\x12 \x01(\x01\x12/\n\x0b\x63reate_time\x18\x13 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\trecv_time\x18\x14 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x15 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x65ntrust_vol\x18\x16 \x01(\x01\x12\x15\n\rentrust_price\x18\x17 \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x18 \x01(\x01\x12\x0f\n\x07\x66rz_amt\x18\x19 \x01(\x01\x12\x0f\n\x07\x66rz_fee\x18\x1a \x01(\x01\x12\x12\n\nextra_info\x18\x1b \x01(\t\x12.\n\x0bmargin_mode\x18\x1c \x01(\x0e\x32\x19.linker.trader.MarginMode\x12.\n\x0bsource_type\x18\x1d \x01(\x0e\x32\x19.linker.trader.SourceType\x12\x12\n\nlever_rate\x18\x1e \x01(\x05\x12\x0e\n\x06\x65rr_id\x18\x1f \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18  \x01(\t\x12\x15\n\rcancel_err_id\x18! \x01(\x11\x12\x16\n\x0e\x63\x61ncel_err_msg\x18\" \x01(\t\"\xf9\x05\n\x08RtnTrade\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x11\n\ttrade_ref\x18\x04 \x01(\t\x12\x10\n\x08order_id\x18\x05 \x01(\x10\x12\x11\n\torder_ref\x18\x06 \x01(\t\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12*\n\texec_role\x18\x08 \x01(\x0e\x32\x17.linker.trader.ExecRole\x12.\n\x0boffset_flag\x18\t \x01(\x0e\x32\x19.linker.trader.OffsetFlag\x12,\n\norder_type\x18\n \x01(\x0e\x32\x18.linker.trader.OrderType\x12\x32\n\rsecurity_type\x18\x0b \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12!\n\x04side\x18\x0c \x01(\x0e\x32\x13.linker.trader.Side\x12\x0e\n\x06symbol\x18\r \x01(\t\x12\x12\n\ntraded_vol\x18\x0e \x01(\x01\x12\x14\n\x0ctraded_price\x18\x0f \x01(\x01\x12\x12\n\ntraded_amt\x18\x10 \x01(\x01\x12\x12\n\ncommission\x18\x11 \x01(\x01\x12\x13\n\x0btrading_day\x18\x12 \x01(\t\x12-\n\trecv_time\x18\x13 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\ntrade_time\x18\x14 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x65ntrust_vol\x18\x15 \x01(\x01\x12\x15\n\rentrust_price\x18\x16 \x01(\x01\x12\x13\n\x0b\x65ntrust_amt\x18\x17 \x01(\x01\x12)\n\x08\x63urrency\x18\x18 \x01(\x0e\x32\x17.linker.trader.Currency\x12.\n\x0bsource_type\x18\x19 \x01(\x0e\x32\x19.linker.trader.SourceType\"\xa5\x01\n\rGatewayOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x11\n\tfully_set\x18\x06 \x01(\x08\x12\'\n\x06orders\x18\x07 \x03(\x0b\x32\x17.linker.trader.RtnOrder\"0\n\x0cReqOrderInfo\x12\x10\n\x08order_id\x18\x01 \x01(\x06\x12\x0e\n\x06sender\x18\x02 \x01(\t\"V\n\x0bReqPosition\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xbe\x05\n\x0cPositionInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12+\n\tdirection\x18\x03 \x01(\x0e\x32\x18.linker.trader.Direction\x12)\n\x08\x65xchange\x18\x04 \x01(\x0e\x32\x17.linker.trader.Exchange\x12.\n\x0bmargin_mode\x18\x05 \x01(\x0e\x32\x19.linker.trader.MarginMode\x12\x32\n\rsecurity_type\x18\x06 \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12\x0e\n\x06symbol\x18\x07 \x01(\t\x12\x10\n\x08position\x18\x08 \x01(\x01\x12\x0e\n\x06yd_pos\x18\t \x01(\x01\x12\x11\n\tavail_pos\x18\n \x01(\x01\x12\x0f\n\x07\x66rz_pos\x18\x0b \x01(\x01\x12\x10\n\x08pos_cost\x18\x0c \x01(\x01\x12\x10\n\x08\x62orrowed\x18\r \x01(\x01\x12\x10\n\x08interest\x18\x0e \x01(\x01\x12\x11\n\tliq_price\x18\x0f \x01(\x01\x12\x0e\n\x06margin\x18\x10 \x01(\x01\x12\x11\n\tmkt_value\x18\x11 \x01(\x01\x12\x11\n\trisk_rate\x18\x12 \x01(\x01\x12\x0b\n\x03pnl\x18\x13 \x01(\x01\x12\x14\n\x0crealized_pnl\x18\x14 \x01(\x01\x12\x16\n\x0eunrealized_pnl\x18\x15 \x01(\x01\x12-\n\trecv_time\x18\x16 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bsource_time\x18\x17 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\x0bsource_type\x18\x18 \x01(\x0e\x32\x19.linker.trader.SourceType\x12)\n\x08\x63urrency\x18\x19 \x01(\x0e\x32\x17.linker.trader.Currency\"\x9b\x01\n\x0fGatewayPosition\x12\x0e\n\x06pos_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12.\n\tpositions\x18\x06 \x03(\x0b\x32\x1b.linker.trader.PositionInfo\"U\n\nReqAccount\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xaf\x04\n\nRspAccount\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x11\n\tavail_amt\x18\x04 \x01(\x01\x12\x0f\n\x07\x62\x61lance\x18\x05 \x01(\x01\x12\x0e\n\x06\x65quity\x18\x06 \x01(\x01\x12\x0f\n\x07\x66rz_amt\x18\x07 \x01(\x01\x12\x12\n\nfrz_margin\x18\x08 \x01(\x01\x12\x11\n\tmkt_value\x18\t \x01(\x01\x12\x12\n\ncommission\x18\n \x01(\x01\x12\x0f\n\x07\x64\x65posit\x18\x0b \x01(\x01\x12\x10\n\x08withdraw\x18\x0c \x01(\x01\x12\x0b\n\x03pnl\x18\r \x01(\x01\x12\x14\n\x0crealized_pnl\x18\x0e \x01(\x01\x12\x16\n\x0eunrealized_pnl\x18\x0f \x01(\x01\x12.\n\x0bsource_type\x18\x10 \x01(\x0e\x32\x19.linker.trader.SourceType\x12)\n\x08\x63urrency\x18\x11 \x01(\x0e\x32\x17.linker.trader.Currency\x12*\n\tfund_type\x18\x12 \x01(\x0e\x32\x17.linker.trader.FundType\x12.\n\trecv_time\x18\xa0\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\x0bsource_time\x18\xa1\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x06\x65rr_id\x18\xe8\x07 \x01(\x11\x12\x10\n\x07\x65rr_msg\x18\xe9\x07 \x01(\t\"Z\n\x0fReqActiveOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"z\n\x15ReqCancelActiveOrders\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\x12\x18\n\x10\x61\x63tive_orders_id\x18\x05 \x01(\x12\"L\n\x15RspCancelActiveOrders\x12\x0e\n\x06\x65rr_id\x18\x01 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x02 \x01(\t\x12\x12\n\naccount_id\x18\x03 \x01(\t\"Y\n\x0eReqTradesToday\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xa5\x01\n\rGatewayTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x11\n\tfully_set\x18\x06 \x01(\x08\x12\'\n\x06trades\x18\x07 \x03(\x0b\x32\x17.linker.trader.RtnTrade\"[\n\x10ReqHistoryTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\x95\x01\n\x10RspHistoryTrades\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\'\n\x06trades\x18\x06 \x03(\x0b\x32\x17.linker.trader.RtnTrade\"\"\n\x0cReqParamInfo\x12\x12\n\nfile_names\x18\x01 \x03(\t\"\x9f\x01\n\x0cRspParamInfo\x12:\n\x0bparam_infos\x18\x01 \x03(\x0b\x32%.linker.trader.RspParamInfo.ParamInfo\x12\x13\n\x0b\x66ile_status\x18\x02 \x01(\t\x1a>\n\tParamInfo\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\x12\r\n\x05group\x18\x03 \x01(\t\"\xb9\x01\n\x0fReqFundTransfer\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x14\n\x0c\x66und_account\x18\x04 \x01(\t\x12\x10\n\x08password\x18\x05 \x01(\t\x12\x0e\n\x06\x61mount\x18\x06 \x01(\x01\x12\x35\n\x0f\x66und_trans_type\x18\x07 \x01(\x0e\x32\x1c.linker.trader.FundTransType\"a\n\x13ReqFundTransferInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x11\n\tserial_id\x18\x04 \x01(\x04\"\xdb\x01\n\x13\x46undTransferInfoOne\x12\x11\n\tserial_id\x18\x01 \x01(\x04\x12\x35\n\x0f\x66und_trans_type\x18\x02 \x01(\x0e\x32\x1c.linker.trader.FundTransType\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x37\n\x10\x66und_oper_status\x18\x04 \x01(\x0e\x32\x1d.linker.trader.FundOperStatus\x12\x31\n\rtransfer_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xd1\x01\n\x13RspFundTransferInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x31\n\x05infos\x18\x06 \x03(\x0b\x32\".linker.trader.FundTransferInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xca\x01\n\x1cReqFundTransFromBankToFuture\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0f\n\x07\x62\x61nk_id\x18\x04 \x01(\t\x12\x11\n\tbroker_id\x18\x05 \x01(\t\x12\x14\n\x0c\x62\x61nk_account\x18\x06 \x01(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x07 \x01(\t\x12\x10\n\x08password\x18\x08 \x01(\t\x12\x14\n\x0ctrade_amount\x18\t \x01(\x01\"\xc5\x02\n\x1c\x46undTransFromBankToFutureOne\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0f\n\x07\x62\x61nk_id\x18\x02 \x01(\t\x12\x11\n\tbroker_id\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nk_serial\x18\x04 \x01(\t\x12\x14\n\x0cplate_serial\x18\x05 \x01(\x12\x12\x13\n\x0b\x63ustom_name\x18\x06 \x01(\t\x12\x15\n\rfuture_serial\x18\x07 \x01(\x12\x12\x14\n\x0ctrade_amount\x18\x08 \x01(\x01\x12\x0b\n\x03tid\x18\t \x01(\x12\x12@\n\x0ftransfer_status\x18\n \x01(\x0e\x32\'.linker.trader.BankFutureTransferStatus\x12\x31\n\rtransfer_time\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xe3\x01\n\x1cRspFundTransFromBankToFuture\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12:\n\x05infos\x18\x06 \x03(\x0b\x32+.linker.trader.FundTransFromBankToFutureOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"U\n\nReqIPOInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xc4\x01\n\nIPOInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x13\n\x0bsymbol_name\x18\x03 \x01(\t\x12\x30\n\x0bsymbol_type\x18\x04 \x01(\x0e\x32\x1b.linker.trader.SecurityType\x12\r\n\x05price\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x17\n\x0fqty_upper_limit\x18\x07 \x01(\x05\"\xbf\x01\n\nRspIPOInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12(\n\x05infos\x18\x06 \x03(\x0b\x32\x19.linker.trader.IPOInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"Z\n\x0fReqIPOQuotaInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06sender\x18\x04 \x01(\t\"e\n\x0fIPOQuotaInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x15\n\rtech_quantity\x18\x03 \x01(\x05\"\xc9\x01\n\x0fRspIPOQuotaInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12-\n\x05infos\x18\x06 \x03(\x0b\x32\x1e.linker.trader.IPOQuotaInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"L\n\x11ReqCreditFundInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xd7\x01\n\x11RspCreditFundInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x19\n\x11maintenance_ratio\x18\x06 \x01(\x01\x12\x11\n\tall_asset\x18\x07 \x01(\x01\x12\x10\n\x08\x61ll_debt\x18\x08 \x01(\x01\x12\x16\n\x0eline_of_credit\x18\t \x01(\x01\x12\x10\n\x08guaranty\x18\n \x01(\x01\"S\n\x18ReqCreditActiveContracts\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xc2\x04\n\x0e\x43reditContract\x12\x38\n\rcontract_type\x18\x01 \x01(\x0e\x32!.linker.trader.CreditContractType\x12\x38\n\rcontract_prop\x18\x02 \x01(\x0e\x32!.linker.trader.CreditContractProp\x12\x13\n\x0b\x63ontract_id\x18\x03 \x01(\t\x12\x13\n\x0bposition_id\x18\x04 \x01(\t\x12\x11\n\torder_ref\x18\x05 \x01(\t\x12<\n\x0f\x63ontract_status\x18\x06 \x01(\x0e\x32#.linker.trader.CreditContractStatus\x12)\n\x08\x65xchange\x18\x07 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x08 \x01(\t\x12.\n\norder_date\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nvalue_date\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_date\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\rorig_end_date\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x18\n\x10remain_principal\x18\r \x01(\x01\x12\x12\n\nremain_qty\x18\x0e \x01(\x03\x12\x17\n\x0fremain_interest\x18\x0f \x01(\x01\"\xd1\x01\n\x18RspCreditActiveContracts\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12,\n\x05infos\x18\x06 \x03(\x0b\x32\x1d.linker.trader.CreditContract\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x8f\x01\n\x19ReqCreditTickerAssignInfo\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0e\n\x06symbol\x18\x04 \x01(\t\x12)\n\x08\x65xchange\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\"\x8f\x01\n\x19\x43reditTickerAssignInfoOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x11\n\tlimit_qty\x18\x03 \x01(\x03\x12\x10\n\x08left_qty\x18\x04 \x01(\x03\x12\x12\n\nfrozen_qty\x18\x05 \x01(\x03\"\xdd\x01\n\x19RspCreditTickerAssignInfo\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x37\n\x05infos\x18\x06 \x03(\x0b\x32(.linker.trader.CreditTickerAssignInfoOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x8a\x01\n\x14ReqCreditExcessStock\x12\x12\n\naccount_id\x18\x01 \x01(\t\x12\x13\n\x0bsub_account\x18\x02 \x01(\t\x12\x0e\n\x06sender\x18\x03 \x01(\t\x12\x0e\n\x06symbol\x18\x04 \x01(\t\x12)\n\x08\x65xchange\x18\x05 \x01(\x0e\x32\x17.linker.trader.Exchange\"\x8e\x01\n\x14\x43reditExcessStockOne\x12)\n\x08\x65xchange\x18\x01 \x01(\x0e\x32\x17.linker.trader.Exchange\x12\x0e\n\x06symbol\x18\x02 \x01(\t\x12\x1d\n\x15transferable_quantity\x18\x03 \x01(\x03\x12\x1c\n\x14transferred_quantity\x18\x04 \x01(\x03\"\xd4\x01\n\x14RspCreditExcessStock\x12\x0e\n\x06req_id\x18\x01 \x01(\x06\x12\x12\n\naccount_id\x18\x02 \x01(\t\x12\x13\n\x0bsub_account\x18\x03 \x01(\t\x12\x0e\n\x06\x65rr_id\x18\x04 \x01(\x11\x12\x0f\n\x07\x65rr_msg\x18\x05 \x01(\t\x12\x33\n\x06stocks\x18\x06 \x03(\x0b\x32#.linker.trader.CreditExcessStockOne\x12-\n\trecv_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp*\xdc\x13\n\x07MsgType\x12\x18\n\x14MSG_TYPE_UNSPECIFIED\x10\x00\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_INSERT\x10\xc8\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_NEED_RM\x10\xc9\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_PASS_RM\x10\xca\x01\x12&\n!MSG_TYPE_REQ_ORDER_INSERT_FAIL_RM\x10\xcb\x01\x12%\n MSG_TYPE_REQ_ORDER_INSERT_BASKET\x10\xcc\x01\x12 \n\x1bMSG_TYPE_REQ_ORDER_INSERT_J\x10\xcd\x01\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_CANCEL\x10\xd2\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_NEED_RM\x10\xd3\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_PASS_RM\x10\xd4\x01\x12&\n!MSG_TYPE_REQ_ORDER_CANCEL_FAIL_RM\x10\xd5\x01\x12 \n\x1bMSG_TYPE_REQ_ORDER_CANCEL_J\x10\xd6\x01\x12\x1e\n\x19MSG_TYPE_REQ_ORDER_STATUS\x10\xdc\x01\x12\x1a\n\x15MSG_TYPE_REQ_POSITION\x10\xe6\x01\x12\x19\n\x14MSG_TYPE_REQ_ACCOUNT\x10\xf0\x01\x12\x1c\n\x17MSG_TYPE_REQ_ORDER_INFO\x10\xfa\x01\x12\x1f\n\x1aMSG_TYPE_REQ_ACTIVE_ORDERS\x10\x84\x02\x12&\n!MSG_TYPE_REQ_CANCEL_ACTIVE_ORDERS\x10\x85\x02\x12 \n\x1bMSG_TYPE_REQ_HISTORY_TRADES\x10\x8e\x02\x12\x1e\n\x19MSG_TYPE_REQ_TRADES_TODAY\x10\x8f\x02\x12!\n\x1cMSG_TYPE_REQ_FUND_TRANS_INFO\x10\x93\x02\x12\x1c\n\x17MSG_TYPE_REQ_FUND_TRANS\x10\x94\x02\x12\x1a\n\x15MSG_TYPE_REQ_IPO_INFO\x10\x95\x02\x12 \n\x1bMSG_TYPE_REQ_IPO_QUOTA_INFO\x10\x96\x02\x12\x30\n+MSG_TYPE_REQ_FUND_TRANS_FROM_BANK_TO_FUTURE\x10\x97\x02\x12#\n\x1eMSG_TYPE_REQ_CREDIT_CASH_REPAY\x10\x98\x02\x12)\n$MSG_TYPE_REQ_CREDIT_EXTEND_DEBT_DATE\x10\x99\x02\x12)\n$MSG_TYPE_REQ_CREDIT_ACTIVE_CONTRACTS\x10\x9a\x02\x12+\n&MSG_TYPE_REQ_CREDIT_TICKER_ASSIGN_INFO\x10\x9b\x02\x12%\n MSG_TYPE_REQ_CREDIT_EXCESS_STOCK\x10\x9c\x02\x12\"\n\x1dMSG_TYPE_REQ_CREDIT_FUND_INFO\x10\x9d\x02\x12\x1c\n\x17MSG_TYPE_REQ_INSTRUMENT\x10\x9e\x02\x12\x1c\n\x17MSG_TYPE_REQ_COMMISSION\x10\x9f\x02\x12\x1d\n\x18MSG_TYPE_REQ_MARGIN_RATE\x10\xa0\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_INSERT\x10\xac\x02\x12%\n MSG_TYPE_RSP_ORDER_INSERT_BASKET\x10\xaf\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_CANCEL\x10\xb6\x02\x12\x1e\n\x19MSG_TYPE_RSP_ORDER_STATUS\x10\xc0\x02\x12\x1a\n\x15MSG_TYPE_RSP_POSITION\x10\xca\x02\x12\x19\n\x14MSG_TYPE_RSP_ACCOUNT\x10\xd4\x02\x12\x1c\n\x17MSG_TYPE_RSP_ORDER_INFO\x10\xde\x02\x12\x1f\n\x1aMSG_TYPE_RSP_ACTIVE_ORDERS\x10\xe8\x02\x12&\n!MSG_TYPE_RSP_CANCEL_ACTIVE_ORDERS\x10\xe9\x02\x12 \n\x1bMSG_TYPE_RSP_HISTORY_TRADES\x10\xf2\x02\x12\x1e\n\x19MSG_TYPE_RSP_TRADES_TODAY\x10\xf3\x02\x12!\n\x1cMSG_TYPE_RSP_FUND_TRANS_INFO\x10\xf7\x02\x12\x1c\n\x17MSG_TYPE_RSP_FUND_TRANS\x10\xf8\x02\x12\x1a\n\x15MSG_TYPE_RSP_IPO_INFO\x10\xf9\x02\x12 \n\x1bMSG_TYPE_RSP_IPO_QUOTA_INFO\x10\xfa\x02\x12\x30\n+MSG_TYPE_RSP_FUND_TRANS_FROM_BANK_TO_FUTURE\x10\xfb\x02\x12#\n\x1eMSG_TYPE_RSP_CREDIT_CASH_REPAY\x10\xfc\x02\x12)\n$MSG_TYPE_RSP_CREDIT_EXTEND_DEBT_DATE\x10\xfd\x02\x12)\n$MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS\x10\xfe\x02\x12+\n&MSG_TYPE_RSP_CREDIT_TICKER_ASSIGN_INFO\x10\xff\x02\x12%\n MSG_TYPE_RSP_CREDIT_EXCESS_STOCK\x10\x80\x03\x12\"\n\x1dMSG_TYPE_RSP_CREDIT_FUND_INFO\x10\x81\x03\x12\x1c\n\x17MSG_TYPE_RSP_INSTRUMENT\x10\x82\x03\x12\x1c\n\x17MSG_TYPE_RSP_COMMISSION\x10\x83\x03\x12\x1d\n\x18MSG_TYPE_RSP_MARGIN_RATE\x10\x84\x03\x12\x17\n\x12MSG_TYPE_RTN_ORDER\x10\x90\x03\x12#\n\x1eMSG_TYPE_RTN_CREDIT_CASH_REPAY\x10\x92\x03\x12)\n$MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE\x10\x93\x03\x12\x1c\n\x17MSG_TYPE_RTN_INSTRUMENT\x10\x94\x03\x12\x1b\n\x16MSG_TYPE_RTN_COMMSSION\x10\x95\x03\x12\x1d\n\x18MSG_TYPE_RTN_MARGIN_RATE\x10\x96\x03\x12\x17\n\x12MSG_TYPE_RTN_TRADE\x10\x9a\x03\x12 \n\x1bMSG_TYPE_GATEWAY_INSTRUMENT\x10\x9b\x03\x12\x1e\n\x1aMSG_TYPE_ORDER_TYPE_PREFIX\x10\x14\x12\x1d\n\x19MSG_TYPE_RTN_ORDER_PREFIX\x10(\x12\x1d\n\x19MSG_TYPE_RTN_TRADE_PREFIX\x10)\x12\x1f\n\x1aMSG_TYPE_PARAM_SERVER_TYPE\x10\xd8\x04\x12\x1c\n\x17MSG_TYPE_PARAM_REQ_INFO\x10\xd9\x04\x12\x1c\n\x17MSG_TYPE_PARAM_RSP_INFO\x10\xda\x04*\xa5\x15\n\x07\x45rrType\x12\x18\n\x14\x45RR_TYPE_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x45RR_TYPE_NO_ERR\x10\x00\x12 \n\x1b\x45RR_TYPE_INCOMPLETE_CONTENT\x10\x80\x08\x12\x1d\n\x18\x45RR_TYPE_INVALID_ACCOUNT\x10\x81\x08\x12 \n\x1b\x45RR_TYPE_JSON_BROKEN_FORMAT\x10\x82\x08\x12!\n\x1c\x45RR_TYPE_LACK_NECESSARY_INFO\x10\x83\x08\x12!\n\x1c\x45RR_TYPE_REQ_NOT_IMPLEMENTED\x10\x84\x08\x12\x1d\n\x18\x45RR_TYPE_ORDER_NOT_EXIST\x10\x85\x08\x12\x1f\n\x1a\x45RR_TYPE_ORDER_NOT_PENDING\x10\x86\x08\x12%\n ERR_TYPE_TRADE_GATEWAY_NOT_EXIST\x10\x87\x08\x12\"\n\x1d\x45RR_TYPE_PRE_REQ_ID_NOT_FOUND\x10\x88\x08\x12&\n!ERR_TYPE_PRE_REQ_ID_NOT_RESPONDED\x10\x89\x08\x12(\n#ERR_TYPE_CANCEL_IN_PROGRESS_ALREADY\x10\x8a\x08\x12\'\n\"ERR_TYPE_FAILED_ALGO_ORDER_PARSING\x10\x8b\x08\x12)\n$ERR_TYPE_FAILED_ALGO_ORDER_INSERTION\x10\x8c\x08\x12,\n\'ERR_TYPE_FAILED_ALGO_ORDER_CANCELLATION\x10\x8d\x08\x12*\n%ERR_TYPE_FAILED_CHILD_ORDER_INSERTION\x10\x8e\x08\x12!\n\x1c\x45RR_TYPE_BASKET_SERVER_EMPTY\x10\x8f\x08\x12+\n&ERR_TYPE_BASKET_SERVER_ORDER_NOT_FOUND\x10\x90\x08\x12\x1c\n\x17\x45RR_TYPE_FAILED_RMS_REQ\x10\x91\x08\x12$\n\x1f\x45RR_TYPE_RMS_RISK_RULE_VIOLATED\x10\x92\x08\x12\x1a\n\x15\x45RR_TYPE_NETWORK_DOWN\x10\x93\x08\x12\x16\n\x11\x45RR_TYPE_TIME_OUT\x10\x94\x08\x12&\n!ERR_TYPE_CONNECTION_BROKE_FINALLY\x10\x95\x08\x12\x1b\n\x16\x45RR_TYPE_OMS_NOT_FOUND\x10\x96\x08\x12\x1f\n\x1a\x45RR_TYPE_GATEWAY_NOT_FOUND\x10\x97\x08\x12\"\n\x1d\x45RR_TYPE_GATEWAY_DISCONNECTED\x10\x98\x08\x12$\n\x1f\x45RR_TYPE_RISK_MANAGER_NOT_FOUND\x10\x99\x08\x12%\n ERR_TYPE_BASKET_SERVER_NOT_FOUND\x10\x9a\x08\x12\x36\n1ERR_TYPE_RECONNECT_FAILURE_REQUESTS_NUMBER_EXCEED\x10\x80\x10\x12\x34\n/ERR_TYPE_RECONNECT_FAILURE_REQUESTS_RATE_EXCEED\x10\x81\x10\x12-\n(ERR_TYPE_RECONNECT_FAILURE_LOGIN_FAILURE\x10\x82\x10\x12\x30\n+ERR_TYPE_FRONT_DISCONNECTED_NETWORK_READING\x10\x83\x10\x12\x30\n+ERR_TYPE_FRONT_DISCONNECTED_NETWORK_WRITING\x10\x84\x10\x12\x32\n-ERR_TYPE_FRONT_DISCONNECTED_HEARTBEAT_TIMEOUT\x10\x85\x10\x12\x35\n0ERR_TYPE_FRONT_DISCONNECTED_SEND_HEATBEAT_FAILED\x10\x86\x10\x12.\n)ERR_TYPE_FRONT_DISCONNECTED_MESSAGE_ERROR\x10\x87\x10\x12(\n#ERR_TYPE_FRONT_DISCONNECTED_GENERAL\x10\x88\x10\x12\x38\n3ERR_TYPE_FRONT_DISCONNECTED_SUBSCRIBED_STREAM_ERROR\x10\x89\x10\x12>\n9ERR_TYPE_FRONT_DISCONNECTED_SUBSCRIBED_STREAM_INDEX_ERROR\x10\x8a\x10\x12\x38\n3ERR_TYPE_FRONT_DISCONNECTED_HEARTBEAT_MESSAGE_ERROR\x10\x8b\x10\x12 \n\x1b\x45RR_TYPE_GATEWAY_REQ_FAILED\x10\x80 \x12\x1f\n\x1a\x45RR_TYPE_FAILED_SEND_ORDER\x10\x81 \x12&\n!ERR_TYPE_FAILED_PARSE_EXCHANGE_ID\x10\x82 \x12$\n\x1f\x45RR_TYPE_FAILED_PARSE_DIRECTION\x10\x83 \x12%\n ERR_TYPE_FAILED_PARSE_ORDER_TYPE\x10\x84 \x12&\n!ERR_TYPE_FAILED_PARSE_OFFSET_FLAG\x10\x85 \x12&\n!ERR_TYPE_FAILED_SEND_ORDER_CANCEL\x10\x86 \x12!\n\x1c\x45RR_TYPE_ORDER_REF_NOT_FOUND\x10\x87 \x12$\n\x1f\x45RR_TYPE_UNSUPPOTED_EXCHANGE_ID\x10\x88 \x12!\n\x1c\x45RR_TYPE_FAILED_CANCEL_ORDER\x10\x89 \x12(\n#ERR_TYPE_FAILED_PARSE_SECURITY_TYPE\x10\x8a \x12*\n%ERR_TYPE_FAILED_PARSE_FUND_TRANS_TYPE\x10\x8b \x12&\n!ERR_TYPE_FAILED_GET_ACTIVE_ORDERS\x10\x8c \x12%\n ERR_TYPE_FAILED_GET_TRADES_TODAY\x10\x8d \x12\x37\n2ERR_TYPE_FAILED_CREDIT_CASH_REPAY_WITH_CONTRACT_ID\x10\x8e \x12:\n5ERR_TYPE_FAILED_CREDIT_CASH_REPAY_WITHOUT_CONTRACT_ID\x10\x8f \x12\x31\n,ERR_TYPE_FAILED_CREDIT_PARSE_CASH_REPAY_TYPE\x10\x90 \x12+\n&ERR_TYPE_FAILED_CREDIT_SEND_CASH_REPAY\x10\x91 \x12\x38\n3ERR_TYPE_FAILED_CREDIT_UNSUPPORTED_EXTEND_DEBT_DATE\x10\x92 \x12\x30\n+ERR_TYPE_FAILED_CREDIT_REQ_ACTIVE_CONTRACTS\x10\x93 \x12\x32\n-ERR_TYPE_FAILED_CREDIT_REQ_TICKER_ASSIGN_INFO\x10\x94 \x12?\n:ERR_TYPE_FAILED_CREDIT_UNSUPPORTED_REQ_CREDIT_EXCESS_STOCK\x10\x95 \x12#\n\x1e\x45RR_TYPE_FAILED_PARSE_CURRENCY\x10\x96 \x12&\n!ERR_TYPE_FAILED_PARSE_TIME_STRING\x10\x97 \x1a\x02\x10\x01*\xc7\x07\n\x08\x45xchange\x12\x18\n\x14\x45XCHANGE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x45XCHANGE_TRADITIONAL\x10\x64\x12\x10\n\x0c\x45XCHANGE_SSE\x10\x65\x12\x10\n\x0c\x45XCHANGE_SZE\x10\x66\x12\x0f\n\x0b\x45XCHANGE_HK\x10g\x12\x12\n\x0e\x45XCHANGE_CFFEX\x10h\x12\x10\n\x0c\x45XCHANGE_DCE\x10i\x12\x11\n\rEXCHANGE_SHFE\x10j\x12\x11\n\rEXCHANGE_CZCE\x10k\x12\x10\n\x0c\x45XCHANGE_SSC\x10l\x12\x10\n\x0c\x45XCHANGE_SEC\x10m\x12\x10\n\x0c\x45XCHANGE_BSE\x10n\x12\x11\n\rEXCHANGE_APEX\x10x\x12\x10\n\x0c\x45XCHANGE_BMD\x10y\x12\x11\n\rEXCHANGE_CBOE\x10z\x12\x14\n\x10\x45XCHANGE_CME_CBT\x10{\x12\x10\n\x0c\x45XCHANGE_CME\x10|\x12\x11\n\rEXCHANGE_DGCX\x10}\x12\x13\n\x0f\x45XCHANGE_DL_DCE\x10~\x12\x10\n\x0c\x45XCHANGE_DME\x10\x7f\x12\x13\n\x0e\x45XCHANGE_ECBOT\x10\x80\x01\x12\x12\n\rEXCHANGE_HKEX\x10\x81\x01\x12\x14\n\x0f\x45XCHANGE_ICE_SG\x10\x82\x01\x12\x11\n\x0c\x45XCHANGE_ICE\x10\x83\x01\x12\x11\n\x0c\x45XCHANGE_INE\x10\x84\x01\x12\x11\n\x0c\x45XCHANGE_JPX\x10\x85\x01\x12\x11\n\x0c\x45XCHANGE_KRX\x10\x86\x01\x12\x13\n\x0e\x45XCHANGE_LIFFE\x10\x87\x01\x12\x11\n\x0c\x45XCHANGE_LME\x10\x88\x01\x12\x13\n\x0e\x45XCHANGE_NYBOT\x10\x89\x01\x12\x14\n\x0f\x45XCHANGE_NY_INE\x10\x8a\x01\x12\x11\n\x0c\x45XCHANGE_SFE\x10\x8b\x01\x12\x12\n\rEXCHANGE_SGXQ\x10\x8c\x01\x12\x14\n\x0f\x45XCHANGE_TAIFEX\x10\x8d\x01\x12\x12\n\rEXCHANGE_TFEX\x10\x8e\x01\x12\x13\n\x0e\x45XCHANGE_TOCOM\x10\x8f\x01\x12\x14\n\x0f\x45XCHANGE_XEUREX\x10\x90\x01\x12\x14\n\x0f\x45XCHANGE_CRYPTO\x10\xc8\x01\x12\x13\n\x0e\x45XCHANGE_HUOBI\x10\xc9\x01\x12\x12\n\rEXCHANGE_OKEX\x10\xca\x01\x12\x15\n\x10\x45XCHANGE_BINANCE\x10\xcb\x01\x12\x14\n\x0f\x45XCHANGE_BITMEX\x10\xcc\x01\x12\x16\n\x11\x45XCHANGE_BITSTAMP\x10\xcd\x01\x12\x16\n\x11\x45XCHANGE_COINBASE\x10\xce\x01\x12\x14\n\x0f\x45XCHANGE_KRAKEN\x10\xcf\x01\x12\x13\n\x0e\x45XCHANGE_BYBIT\x10\xd0\x01\x12\x15\n\x10\x45XCHANGE_DERIBIT\x10\xd1\x01*\xdd\x03\n\x0cSecurityType\x12\x1d\n\x19SECURITY_TYPE_UNSPECIFIED\x10\x00\x12\x1d\n\x19SECURITY_TYPE_TRADITIONAL\x10\x64\x12\x17\n\x13SECURITY_TYPE_STOCK\x10\x65\x12\x18\n\x14SECURITY_TYPE_FUTURE\x10\x66\x12\x16\n\x12SECURITY_TYPE_BOND\x10g\x12\x1e\n\x1aSECURITY_TYPE_STOCK_OPTION\x10h\x12\x16\n\x12SECURITY_TYPE_FUND\x10i\x12\x1c\n\x18SECURITY_TYPE_TECH_STOCK\x10j\x12\x17\n\x13SECURITY_TYPE_INDEX\x10k\x12\x16\n\x12SECURITY_TYPE_REPO\x10l\x12\x15\n\x11SECURITY_TYPE_IPO\x10m\x12\x19\n\x14SECURITY_TYPE_CRYPTO\x10\xc8\x01\x12\x19\n\x14SECURITY_TYPE_C_SPOT\x10\xc9\x01\x12\x1b\n\x16SECURITY_TYPE_C_MARGIN\x10\xca\x01\x12\x1b\n\x16SECURITY_TYPE_C_FUTURE\x10\xcb\x01\x12\x19\n\x14SECURITY_TYPE_C_SWAP\x10\xcc\x01\x12\x1b\n\x16SECURITY_TYPE_C_OPTION\x10\xcd\x01*\xaf\x05\n\tOrderType\x12\x1a\n\x16ORDER_TYPE_UNSPECIFIED\x10\x00\x12!\n\x1dORDER_TYPE_PLAIN_ORDER_PREFIX\x10\n\x12 \n\x1cORDER_TYPE_ALGO_ORDER_PREFIX\x10\x14\x12\"\n\x1eORDER_TYPE_BASKET_ORDER_PREFIX\x10\x1e\x12\x14\n\x10ORDER_TYPE_PLAIN\x10\x64\x12\x14\n\x10ORDER_TYPE_LIMIT\x10\x65\x12\x15\n\x11ORDER_TYPE_MARKET\x10\x66\x12\x12\n\x0eORDER_TYPE_FAK\x10g\x12\x12\n\x0eORDER_TYPE_FOK\x10h\x12\x12\n\x0eORDER_TYPE_ANY\x10i\x12\x19\n\x15ORDER_TYPE_FAK_BEST_5\x10j\x12\x1b\n\x17ORDER_TYPE_FORWARD_BEST\x10k\x12\x1b\n\x17ORDER_TYPE_REVERSE_BEST\x10l\x12\x1e\n\x1aORDER_TYPE_BEST_5_OR_LIMIT\x10m\x12\x14\n\x0fORDER_TYPE_ALGO\x10\xc8\x01\x12\x14\n\x0fORDER_TYPE_TWAP\x10\xc9\x01\x12\x14\n\x0fORDER_TYPE_VWAP\x10\xca\x01\x12\x18\n\x13ORDER_TYPE_ZC_SMART\x10\xd2\x01\x12\x1c\n\x17ORDER_TYPE_KF_TWAP_PLUS\x10\xd3\x01\x12\x1c\n\x17ORDER_TYPE_KF_VWAP_PLUS\x10\xd4\x01\x12\x1d\n\x18ORDER_TYPE_JN_G_PXINLINE\x10\xd5\x01\x12\x1d\n\x18ORDER_TYPE_VOLUME_INLINE\x10\xd6\x01\x12\x18\n\x13ORDER_TYPE_FT_AIWAP\x10\xd7\x01\x12\x16\n\x11ORDER_TYPE_BASKET\x10\xac\x02\x12!\n\x1cORDER_TYPE_SINGLE_DAY_BASKET\x10\xad\x02*\xd0\x01\n\x04Side\x12\x14\n\x10SIDE_UNSPECIFIED\x10\x00\x12\x0c\n\x08SIDE_BUY\x10\x01\x12\r\n\tSIDE_SELL\x10\x02\x12\x16\n\x12SIDE_FINANCING_BUY\x10\x03\x12\x17\n\x13SIDE_FINANCING_SELL\x10\x04\x12\x17\n\x13SIDE_SECURITIES_BUY\x10\x05\x12\x18\n\x14SIDE_SECURITIES_SELL\x10\x06\x12\x15\n\x11SIDE_SURSTK_TRANS\x10\x07\x12\x1a\n\x16SIDE_STOCK_REPAY_STOCK\x10\x08*\xb1\x01\n\nOffsetFlag\x12\x1b\n\x17OFFSET_FLAG_UNSPECIFIED\x10\x00\x12\x14\n\x10OFFSET_FLAG_OPEN\x10\x01\x12\x15\n\x11OFFSET_FLAG_CLOSE\x10\x02\x12\x1b\n\x17OFFSET_FLAG_FORCE_CLOSE\x10\x03\x12\x1b\n\x17OFFSET_FLAG_CLOSE_TODAY\x10\x04\x12\x1f\n\x1bOFFSET_FLAG_CLOSE_YESTERDAY\x10\x05*\xce\x05\n\x0bOrderStatus\x12\x1c\n\x18ORDER_STATUS_UNSPECIFIED\x10\x00\x12\x18\n\x14ORDER_STATUS_UNKNOWN\x10\x01\x12\x15\n\x11ORDER_STATUS_INIT\x10\n\x12\x19\n\x15ORDER_STATUS_PROPOSED\x10\x64\x12 \n\x1cORDER_STATUS_PENDING_PROPOSE\x10\x65\x12\x1a\n\x16ORDER_STATUS_PROPOSING\x10\x66\x12\x1b\n\x16ORDER_STATUS_RESPONDED\x10\xc8\x01\x12\x1a\n\x15ORDER_STATUS_QUEUEING\x10\xac\x02\x12#\n\x1eORDER_STATUS_NO_TRADE_QUEUEING\x10\xad\x02\x12%\n ORDER_STATUS_PART_TRADE_QUEUEING\x10\xae\x02\x12\x1b\n\x16ORDER_STATUS_TO_CANCEL\x10\xf2\x02\x12\x1d\n\x18ORDER_STATUS_PENDING_MAX\x10\x8f\x03\x12\x1a\n\x15ORDER_STATUS_REJECTED\x10\x90\x03\x12\"\n\x1dORDER_STATUS_REJECT_BY_ROUTER\x10\x91\x03\x12#\n\x1eORDER_STATUS_REJECT_BY_GATEWAY\x10\x92\x03\x12$\n\x1fORDER_STATUS_REJECT_BY_EXCHANGE\x10\x93\x03\x12$\n\x1fORDER_STATUS_REJECT_BY_RISK_MGR\x10\x94\x03\x12\x1f\n\x1aORDER_STATUS_CANCEL_FAILED\x10\x95\x03\x12\x1a\n\x15ORDER_STATUS_CANCELED\x10\xd8\x04\x12#\n\x1eORDER_STATUS_NO_TRADE_CANCELED\x10\xd9\x04\x12%\n ORDER_STATUS_PART_TRADE_CANCELED\x10\xda\x04\x12\x1c\n\x17ORDER_STATUS_ALL_TRADED\x10\xbc\x05*\xdc\x01\n\x08\x43urrency\x12\x18\n\x14\x43URRENCY_UNSPECIFIED\x10\x00\x12\x10\n\x0c\x43URRENCY_CNY\x10\x01\x12\x10\n\x0c\x43URRENCY_USD\x10\x02\x12\x10\n\x0c\x43URRENCY_HKD\x10\x03\x12\x13\n\x0f\x43URRENCY_CRYPTO\x10\x64\x12\x10\n\x0c\x43URRENCY_BTC\x10\x65\x12\x10\n\x0c\x43URRENCY_ETH\x10\x66\x12\x10\n\x0c\x43URRENCY_EOS\x10g\x12\x10\n\x0c\x43URRENCY_XRP\x10h\x12\x10\n\x0c\x43URRENCY_LTC\x10i\x12\x11\n\rCURRENCY_USDT\x10j*\x80\x04\n\nSourceType\x12\x1b\n\x17SOURCE_TYPE_UNSPECIFIED\x10\x00\x12\x13\n\x0fSOURCE_TYPE_OMS\x10\x01\x12\x17\n\x13SOURCE_TYPE_GTW_API\x10\x64\x12\x13\n\x0fSOURCE_TYPE_CTP\x10\x65\x12\x15\n\x11SOURCE_TYPE_FEMAS\x10\x66\x12\x13\n\x0fSOURCE_TYPE_XTP\x10g\x12\x14\n\x10SOURCE_TYPE_TORA\x10h\x12\x14\n\x10SOURCE_TYPE_KPMS\x10i\x12\x13\n\x0fSOURCE_TYPE_UFX\x10j\x12\x13\n\x0fSOURCE_TYPE_LTS\x10k\x12\x14\n\x10SOURCE_TYPE_PBOX\x10l\x12\x12\n\x0eSOURCE_TYPE_DA\x10m\x12\x19\n\x14SOURCE_TYPE_GTW_FILE\x10\xc8\x01\x12\x1c\n\x17SOURCE_TYPE_XUNTOU_FILE\x10\xc9\x01\x12\x19\n\x14SOURCE_TYPE_GTW_EXCH\x10\xac\x02\x12\x16\n\x11SOURCE_TYPE_HUOBI\x10\xad\x02\x12\x15\n\x10SOURCE_TYPE_OKEX\x10\xae\x02\x12\x18\n\x13SOURCE_TYPE_BINANCE\x10\xaf\x02\x12\x17\n\x12SOURCE_TYPE_BITMEX\x10\xb0\x02\x12\x16\n\x11SOURCE_TYPE_BYBIT\x10\xb1\x02\x12\x18\n\x13SOURCE_TYPE_DERIBIT\x10\xb2\x02*O\n\x08\x45xecRole\x12\x19\n\x15\x45XEC_ROLE_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x45XEC_ROLE_MAKER\x10\x01\x12\x13\n\x0f\x45XEC_ROLE_TAKER\x10\x02*Y\n\nMarginMode\x12\x1b\n\x17MARGIN_MODE_UNSPECIFIED\x10\x00\x12\x17\n\x13MARGIN_MODE_CROSSED\x10\x01\x12\x15\n\x11MARGIN_MODE_FIXED\x10\x02*y\n\tDirection\x12\x19\n\x15\x44IRECTION_UNSPECIFIED\x10\x00\x12\x11\n\rDIRECTION_NET\x10\x01\x12\x12\n\x0e\x44IRECTION_LONG\x10\x02\x12\x13\n\x0f\x44IRECTION_SHORT\x10\x03\x12\x15\n\x11\x44IRECTION_COVERED\x10\x04*\x9e\x01\n\rFundTransType\x12\x1f\n\x1b\x46UND_TRANS_TYPE_UNSPECIFIED\x10\x00\x12\x17\n\x13\x46UND_TRANS_TYPE_OUT\x10\x01\x12\x16\n\x12\x46UND_TRANS_TYPE_IN\x10\x02\x12\x1d\n\x19\x46UND_TRANS_TYPE_INTER_OUT\x10\x03\x12\x1c\n\x18\x46UND_TRANS_TYPE_INTER_IN\x10\x04*\xae\x01\n\x0e\x46undOperStatus\x12 \n\x1c\x46UND_OPER_STATUS_UNSPECIFIED\x10\x00\x12\x1f\n\x1b\x46UND_OPER_STATUS_PROCESSING\x10\x01\x12\x1c\n\x18\x46UND_OPER_STATUS_SUCCESS\x10\x02\x12\x1b\n\x17\x46UND_OPER_STATUS_FAILED\x10\x03\x12\x1e\n\x1a\x46UND_OPER_STATUS_SUBMITTED\x10\x04*\x98\x01\n\x18\x42\x61nkFutureTransferStatus\x12+\n\'BANK_FUTURE_TRANSFER_STATUS_UNSPECIFIED\x10\x00\x12\'\n#BANK_FUTURE_TRANSFER_STATUS_SUCCESS\x10\x01\x12&\n\"BANK_FUTURE_TRANSFER_STATUS_FAILED\x10\x02*T\n\x08\x46undType\x12\x19\n\x15\x46UND_TYPE_UNSPECIFIED\x10\x00\x12\x12\n\x0e\x46UND_TYPE_QFII\x10\x01\x12\x19\n\x15\x46UND_TYPE_NORTH_BOUND\x10\x02*\xac\x02\n\x1a\x43reditDebtExtendOperStatus\x12.\n*CREDIT_DEBT_EXTEND_OPER_STATUS_UNSPECIFIED\x10\x00\x12*\n&CREDIT_DEBT_EXTEND_OPER_STATUS_UNKNOWN\x10\x01\x12-\n)CREDIT_DEBT_EXTEND_OPER_STATUS_PROCESSING\x10\x02\x12,\n(CREDIT_DEBT_EXTEND_OPER_STATUS_SUBMITTED\x10\x03\x12*\n&CREDIT_DEBT_EXTEND_OPER_STATUS_SUCCESS\x10\x04\x12)\n%CREDIT_DEBT_EXTEND_OPER_STATUS_FAILED\x10\x05*~\n\x0f\x43reditRepayType\x12!\n\x1d\x43REDIT_REPAY_TYPE_UNSPECIFIED\x10\x00\x12#\n\x1f\x43REDIT_REPAY_TYPE_BY_SETTLEMENT\x10\x01\x12#\n\x1f\x43REDIT_REPAY_TYPE_INTEREST_ONLY\x10\x02*\xa2\x01\n\x12\x43reditContractType\x12$\n CREDIT_CONTRACT_TYPE_UNSPECIFIED\x10\x00\x12 \n\x1c\x43REDIT_CONTRACT_TYPE_UNKNOWN\x10\x01\x12\x1f\n\x1b\x43REDIT_CONTRACT_TYPE_MARGIN\x10\x02\x12#\n\x1f\x43REDIT_CONTRACT_TYPE_SHORT_SALE\x10\x03*\xd2\x01\n\x12\x43reditContractProp\x12$\n CREDIT_CONTRACT_PROP_UNSPECIFIED\x10\x00\x12!\n\x1d\x43REDIT_CONTRACT_PROP_ORDINARY\x10\x01\x12 \n\x1c\x43REDIT_CONTRACT_PROP_SPECIAL\x10\x02\x12(\n$CREDIT_CONTRACT_PROP_ORDINARY_OTHERS\x10\x03\x12\'\n#CREDIT_CONTRACT_PROP_SPECIAL_OTHERS\x10\x04*\xdc\x01\n\x14\x43reditContractStatus\x12&\n\"CREDIT_CONTRACT_STATUS_UNSPECIFIED\x10\x00\x12\"\n\x1e\x43REDIT_CONTRACT_STATUS_UNKNOWN\x10\x01\x12+\n\'CREDIT_CONTRACT_STATUS_NOT_FULLY_REPAID\x10\x02\x12\'\n#CREDIT_CONTRACT_STATUS_FULLY_REPAID\x10\x03\x12\"\n\x1e\x43REDIT_CONTRACT_STATUS_OVERDUE\x10\x04*\xbc\x01\n\tHedgeFlag\x12\x19\n\x15HedgeFlag_UNSPECIFIED\x10\x00\x12\x19\n\x15HedgeFlag_Speculation\x10\x01\x12\x17\n\x13HedgeFlag_Arbitrage\x10\x02\x12\x13\n\x0fHedgeFlag_Hedge\x10\x03\x12\x19\n\x15HedgeFlag_MarketMaker\x10\x04\x12\x17\n\x13HedgeFlag_SpecHedge\x10\x05\x12\x17\n\x13HedgeFlag_HedgeSpec\x10\x06\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -156,138 +156,178 @@ _MSGTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ORDER_INSERT', index=31, number=300,
+      name='MSG_TYPE_REQ_INSTRUMENT', index=31, number=286,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ORDER_INSERT_BASKET', index=32, number=303,
+      name='MSG_TYPE_REQ_COMMISSION', index=32, number=287,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ORDER_CANCEL', index=33, number=310,
+      name='MSG_TYPE_REQ_MARGIN_RATE', index=33, number=288,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ORDER_STATUS', index=34, number=320,
+      name='MSG_TYPE_RSP_ORDER_INSERT', index=34, number=300,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_POSITION', index=35, number=330,
+      name='MSG_TYPE_RSP_ORDER_INSERT_BASKET', index=35, number=303,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ACCOUNT', index=36, number=340,
+      name='MSG_TYPE_RSP_ORDER_CANCEL', index=36, number=310,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ORDER_INFO', index=37, number=350,
+      name='MSG_TYPE_RSP_ORDER_STATUS', index=37, number=320,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_ACTIVE_ORDERS', index=38, number=360,
+      name='MSG_TYPE_RSP_POSITION', index=38, number=330,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CANCEL_ACTIVE_ORDERS', index=39, number=361,
+      name='MSG_TYPE_RSP_ACCOUNT', index=39, number=340,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_HISTORY_TRADES', index=40, number=370,
+      name='MSG_TYPE_RSP_ORDER_INFO', index=40, number=350,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_TRADES_TODAY', index=41, number=371,
+      name='MSG_TYPE_RSP_ACTIVE_ORDERS', index=41, number=360,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_FUND_TRANS_INFO', index=42, number=375,
+      name='MSG_TYPE_RSP_CANCEL_ACTIVE_ORDERS', index=42, number=361,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_FUND_TRANS', index=43, number=376,
+      name='MSG_TYPE_RSP_HISTORY_TRADES', index=43, number=370,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_IPO_INFO', index=44, number=377,
+      name='MSG_TYPE_RSP_TRADES_TODAY', index=44, number=371,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_IPO_QUOTA_INFO', index=45, number=378,
+      name='MSG_TYPE_RSP_FUND_TRANS_INFO', index=45, number=375,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_FUND_TRANS_FROM_BANK_TO_FUTURE', index=46, number=379,
+      name='MSG_TYPE_RSP_FUND_TRANS', index=46, number=376,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_CASH_REPAY', index=47, number=380,
+      name='MSG_TYPE_RSP_IPO_INFO', index=47, number=377,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_EXTEND_DEBT_DATE', index=48, number=381,
+      name='MSG_TYPE_RSP_IPO_QUOTA_INFO', index=48, number=378,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS', index=49, number=382,
+      name='MSG_TYPE_RSP_FUND_TRANS_FROM_BANK_TO_FUTURE', index=49, number=379,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_TICKER_ASSIGN_INFO', index=50, number=383,
+      name='MSG_TYPE_RSP_CREDIT_CASH_REPAY', index=50, number=380,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_EXCESS_STOCK', index=51, number=384,
+      name='MSG_TYPE_RSP_CREDIT_EXTEND_DEBT_DATE', index=51, number=381,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RSP_CREDIT_FUND_INFO', index=52, number=385,
+      name='MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS', index=52, number=382,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_ORDER', index=53, number=400,
+      name='MSG_TYPE_RSP_CREDIT_TICKER_ASSIGN_INFO', index=53, number=383,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_CREDIT_CASH_REPAY', index=54, number=402,
+      name='MSG_TYPE_RSP_CREDIT_EXCESS_STOCK', index=54, number=384,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE', index=55, number=403,
+      name='MSG_TYPE_RSP_CREDIT_FUND_INFO', index=55, number=385,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_TRADE', index=56, number=410,
+      name='MSG_TYPE_RSP_INSTRUMENT', index=56, number=386,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_ORDER_TYPE_PREFIX', index=57, number=20,
+      name='MSG_TYPE_RSP_COMMISSION', index=57, number=387,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_ORDER_PREFIX', index=58, number=40,
+      name='MSG_TYPE_RSP_MARGIN_RATE', index=58, number=388,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_RTN_TRADE_PREFIX', index=59, number=41,
+      name='MSG_TYPE_RTN_ORDER', index=59, number=400,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_PARAM_SERVER_TYPE', index=60, number=600,
+      name='MSG_TYPE_RTN_CREDIT_CASH_REPAY', index=60, number=402,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_PARAM_REQ_INFO', index=61, number=601,
+      name='MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE', index=61, number=403,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_TYPE_PARAM_RSP_INFO', index=62, number=602,
+      name='MSG_TYPE_RTN_INSTRUMENT', index=62, number=404,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_RTN_COMMSSION', index=63, number=405,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_RTN_MARGIN_RATE', index=64, number=406,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_RTN_TRADE', index=65, number=410,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_GATEWAY_INSTRUMENT', index=66, number=411,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_ORDER_TYPE_PREFIX', index=67, number=20,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_RTN_ORDER_PREFIX', index=68, number=40,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_RTN_TRADE_PREFIX', index=69, number=41,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_PARAM_SERVER_TYPE', index=70, number=600,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_PARAM_REQ_INFO', index=71, number=601,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_TYPE_PARAM_RSP_INFO', index=72, number=602,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11129,
-  serialized_end=13347,
+  serialized_start=13170,
+  serialized_end=15694,
 )
 _sym_db.RegisterEnumDescriptor(_MSGTYPE)
 
@@ -561,8 +601,8 @@ _ERRTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=b'\020\001',
-  serialized_start=13350,
-  serialized_end=16075,
+  serialized_start=15697,
+  serialized_end=18422,
 )
 _sym_db.RegisterEnumDescriptor(_ERRTYPE)
 
@@ -764,8 +804,8 @@ _EXCHANGE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=16078,
-  serialized_end=17045,
+  serialized_start=18425,
+  serialized_end=19392,
 )
 _sym_db.RegisterEnumDescriptor(_EXCHANGE)
 
@@ -847,8 +887,8 @@ _SECURITYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=17048,
-  serialized_end=17525,
+  serialized_start=19395,
+  serialized_end=19872,
 )
 _sym_db.RegisterEnumDescriptor(_SECURITYTYPE)
 
@@ -962,8 +1002,8 @@ _ORDERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=17528,
-  serialized_end=18215,
+  serialized_start=19875,
+  serialized_end=20562,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERTYPE)
 
@@ -1013,8 +1053,8 @@ _SIDE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=18218,
-  serialized_end=18426,
+  serialized_start=20565,
+  serialized_end=20773,
 )
 _sym_db.RegisterEnumDescriptor(_SIDE)
 
@@ -1052,8 +1092,8 @@ _OFFSETFLAG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=18429,
-  serialized_end=18606,
+  serialized_start=20776,
+  serialized_end=20953,
 )
 _sym_db.RegisterEnumDescriptor(_OFFSETFLAG)
 
@@ -1155,8 +1195,8 @@ _ORDERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=18609,
-  serialized_end=19327,
+  serialized_start=20956,
+  serialized_end=21674,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERSTATUS)
 
@@ -1214,8 +1254,8 @@ _CURRENCY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=19330,
-  serialized_end=19550,
+  serialized_start=21677,
+  serialized_end=21897,
 )
 _sym_db.RegisterEnumDescriptor(_CURRENCY)
 
@@ -1313,8 +1353,8 @@ _SOURCETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=19553,
-  serialized_end=20065,
+  serialized_start=21900,
+  serialized_end=22412,
 )
 _sym_db.RegisterEnumDescriptor(_SOURCETYPE)
 
@@ -1340,8 +1380,8 @@ _EXECROLE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20067,
-  serialized_end=20146,
+  serialized_start=22414,
+  serialized_end=22493,
 )
 _sym_db.RegisterEnumDescriptor(_EXECROLE)
 
@@ -1367,8 +1407,8 @@ _MARGINMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20148,
-  serialized_end=20237,
+  serialized_start=22495,
+  serialized_end=22584,
 )
 _sym_db.RegisterEnumDescriptor(_MARGINMODE)
 
@@ -1402,8 +1442,8 @@ _DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20239,
-  serialized_end=20360,
+  serialized_start=22586,
+  serialized_end=22707,
 )
 _sym_db.RegisterEnumDescriptor(_DIRECTION)
 
@@ -1437,8 +1477,8 @@ _FUNDTRANSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20363,
-  serialized_end=20521,
+  serialized_start=22710,
+  serialized_end=22868,
 )
 _sym_db.RegisterEnumDescriptor(_FUNDTRANSTYPE)
 
@@ -1472,8 +1512,8 @@ _FUNDOPERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20524,
-  serialized_end=20698,
+  serialized_start=22871,
+  serialized_end=23045,
 )
 _sym_db.RegisterEnumDescriptor(_FUNDOPERSTATUS)
 
@@ -1499,8 +1539,8 @@ _BANKFUTURETRANSFERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20701,
-  serialized_end=20853,
+  serialized_start=23048,
+  serialized_end=23200,
 )
 _sym_db.RegisterEnumDescriptor(_BANKFUTURETRANSFERSTATUS)
 
@@ -1526,8 +1566,8 @@ _FUNDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20855,
-  serialized_end=20939,
+  serialized_start=23202,
+  serialized_end=23286,
 )
 _sym_db.RegisterEnumDescriptor(_FUNDTYPE)
 
@@ -1565,8 +1605,8 @@ _CREDITDEBTEXTENDOPERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20942,
-  serialized_end=21242,
+  serialized_start=23289,
+  serialized_end=23589,
 )
 _sym_db.RegisterEnumDescriptor(_CREDITDEBTEXTENDOPERSTATUS)
 
@@ -1592,8 +1632,8 @@ _CREDITREPAYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21244,
-  serialized_end=21370,
+  serialized_start=23591,
+  serialized_end=23717,
 )
 _sym_db.RegisterEnumDescriptor(_CREDITREPAYTYPE)
 
@@ -1623,8 +1663,8 @@ _CREDITCONTRACTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21373,
-  serialized_end=21535,
+  serialized_start=23720,
+  serialized_end=23882,
 )
 _sym_db.RegisterEnumDescriptor(_CREDITCONTRACTTYPE)
 
@@ -1658,8 +1698,8 @@ _CREDITCONTRACTPROP = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21538,
-  serialized_end=21748,
+  serialized_start=23885,
+  serialized_end=24095,
 )
 _sym_db.RegisterEnumDescriptor(_CREDITCONTRACTPROP)
 
@@ -1693,12 +1733,55 @@ _CREDITCONTRACTSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21751,
-  serialized_end=21971,
+  serialized_start=24098,
+  serialized_end=24318,
 )
 _sym_db.RegisterEnumDescriptor(_CREDITCONTRACTSTATUS)
 
 CreditContractStatus = enum_type_wrapper.EnumTypeWrapper(_CREDITCONTRACTSTATUS)
+_HEDGEFLAG = _descriptor.EnumDescriptor(
+  name='HedgeFlag',
+  full_name='linker.trader.HedgeFlag',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_UNSPECIFIED', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_Speculation', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_Arbitrage', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_Hedge', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_MarketMaker', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_SpecHedge', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HedgeFlag_HedgeSpec', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=24321,
+  serialized_end=24509,
+)
+_sym_db.RegisterEnumDescriptor(_HEDGEFLAG)
+
+HedgeFlag = enum_type_wrapper.EnumTypeWrapper(_HEDGEFLAG)
 MSG_TYPE_UNSPECIFIED = 0
 MSG_TYPE_REQ_ORDER_INSERT = 200
 MSG_TYPE_REQ_ORDER_INSERT_NEED_RM = 201
@@ -1730,6 +1813,9 @@ MSG_TYPE_REQ_CREDIT_ACTIVE_CONTRACTS = 282
 MSG_TYPE_REQ_CREDIT_TICKER_ASSIGN_INFO = 283
 MSG_TYPE_REQ_CREDIT_EXCESS_STOCK = 284
 MSG_TYPE_REQ_CREDIT_FUND_INFO = 285
+MSG_TYPE_REQ_INSTRUMENT = 286
+MSG_TYPE_REQ_COMMISSION = 287
+MSG_TYPE_REQ_MARGIN_RATE = 288
 MSG_TYPE_RSP_ORDER_INSERT = 300
 MSG_TYPE_RSP_ORDER_INSERT_BASKET = 303
 MSG_TYPE_RSP_ORDER_CANCEL = 310
@@ -1752,10 +1838,17 @@ MSG_TYPE_RSP_CREDIT_ACTIVE_CONTRACTS = 382
 MSG_TYPE_RSP_CREDIT_TICKER_ASSIGN_INFO = 383
 MSG_TYPE_RSP_CREDIT_EXCESS_STOCK = 384
 MSG_TYPE_RSP_CREDIT_FUND_INFO = 385
+MSG_TYPE_RSP_INSTRUMENT = 386
+MSG_TYPE_RSP_COMMISSION = 387
+MSG_TYPE_RSP_MARGIN_RATE = 388
 MSG_TYPE_RTN_ORDER = 400
 MSG_TYPE_RTN_CREDIT_CASH_REPAY = 402
 MSG_TYPE_RTN_CREDIT_EXTEND_DEBT_DATE = 403
+MSG_TYPE_RTN_INSTRUMENT = 404
+MSG_TYPE_RTN_COMMSSION = 405
+MSG_TYPE_RTN_MARGIN_RATE = 406
 MSG_TYPE_RTN_TRADE = 410
+MSG_TYPE_GATEWAY_INSTRUMENT = 411
 MSG_TYPE_ORDER_TYPE_PREFIX = 20
 MSG_TYPE_RTN_ORDER_PREFIX = 40
 MSG_TYPE_RTN_TRADE_PREFIX = 41
@@ -2035,6 +2128,13 @@ CREDIT_CONTRACT_STATUS_UNKNOWN = 1
 CREDIT_CONTRACT_STATUS_NOT_FULLY_REPAID = 2
 CREDIT_CONTRACT_STATUS_FULLY_REPAID = 3
 CREDIT_CONTRACT_STATUS_OVERDUE = 4
+HedgeFlag_UNSPECIFIED = 0
+HedgeFlag_Speculation = 1
+HedgeFlag_Arbitrage = 2
+HedgeFlag_Hedge = 3
+HedgeFlag_MarketMaker = 4
+HedgeFlag_SpecHedge = 5
+HedgeFlag_HedgeSpec = 6
 
 
 
@@ -2199,6 +2299,13 @@ _REQORDERINSERT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hedge_flag', full_name='linker.trader.ReqOrderInsert.hedge_flag', index=22,
+      number=23, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -2212,7 +2319,7 @@ _REQORDERINSERT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=66,
-  serialized_end=723,
+  serialized_end=769,
 )
 
 
@@ -2270,8 +2377,8 @@ _RSPORDERINSERT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=725,
-  serialized_end=831,
+  serialized_start=771,
+  serialized_end=877,
 )
 
 
@@ -2322,8 +2429,8 @@ _REQORDERCANCEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=833,
-  serialized_end=928,
+  serialized_start=879,
+  serialized_end=974,
 )
 
 
@@ -2388,8 +2495,8 @@ _RSPORDERCANCEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=930,
-  serialized_end=1052,
+  serialized_start=976,
+  serialized_end=1098,
 )
 
 
@@ -2454,8 +2561,8 @@ _REQCREDITCASHREPAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1055,
-  serialized_end=1221,
+  serialized_start=1101,
+  serialized_end=1267,
 )
 
 
@@ -2513,8 +2620,8 @@ _RSPCREDITCASHREPAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1223,
-  serialized_end=1333,
+  serialized_start=1269,
+  serialized_end=1379,
 )
 
 
@@ -2593,8 +2700,8 @@ _RTNCREDITCASHREPAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1336,
-  serialized_end=1522,
+  serialized_start=1382,
+  serialized_end=1568,
 )
 
 
@@ -2652,8 +2759,185 @@ _REQCREDITEXTENDDEBTDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1524,
-  serialized_end=1647,
+  serialized_start=1570,
+  serialized_end=1693,
+)
+
+
+_REQINSTRUMENT = _descriptor.Descriptor(
+  name='ReqInstrument',
+  full_name='linker.trader.ReqInstrument',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.ReqInstrument.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.ReqInstrument.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.ReqInstrument.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instrument_id', full_name='linker.trader.ReqInstrument.instrument_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='exchange_id', full_name='linker.trader.ReqInstrument.exchange_id', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1696,
+  serialized_end=1837,
+)
+
+
+_REQCOMMISSION = _descriptor.Descriptor(
+  name='ReqCommission',
+  full_name='linker.trader.ReqCommission',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.ReqCommission.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.ReqCommission.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.ReqCommission.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instrument_id', full_name='linker.trader.ReqCommission.instrument_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1839,
+  serialized_end=1934,
+)
+
+
+_REQMARGINRATE = _descriptor.Descriptor(
+  name='ReqMarginRate',
+  full_name='linker.trader.ReqMarginRate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.ReqMarginRate.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.ReqMarginRate.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.ReqMarginRate.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instrument_id', full_name='linker.trader.ReqMarginRate.instrument_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='exchange_id', full_name='linker.trader.ReqMarginRate.exchange_id', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hedge_flag', full_name='linker.trader.ReqMarginRate.hedge_flag', index=5,
+      number=6, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1937,
+  serialized_end=2124,
 )
 
 
@@ -2711,8 +2995,67 @@ _RSPCREDITEXTENDDEBTDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1649,
-  serialized_end=1764,
+  serialized_start=2126,
+  serialized_end=2241,
+)
+
+
+_RSPINSTRUMENT = _descriptor.Descriptor(
+  name='RspInstrument',
+  full_name='linker.trader.RspInstrument',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='order_id', full_name='linker.trader.RspInstrument.order_id', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_ref', full_name='linker.trader.RspInstrument.order_ref', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_id', full_name='linker.trader.RspInstrument.err_id', index=2,
+      number=3, type=17, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_msg', full_name='linker.trader.RspInstrument.err_msg', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.RspInstrument.account_id', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2243,
+  serialized_end=2348,
 )
 
 
@@ -2791,8 +3134,509 @@ _RTNCREDITEXTENDDEBTDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1767,
-  serialized_end=2018,
+  serialized_start=2351,
+  serialized_end=2602,
+)
+
+
+_GATEWAYINSTRUMENT = _descriptor.Descriptor(
+  name='GatewayInstrument',
+  full_name='linker.trader.GatewayInstrument',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='req_id', full_name='linker.trader.GatewayInstrument.req_id', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.GatewayInstrument.account_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.GatewayInstrument.sub_account', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_id', full_name='linker.trader.GatewayInstrument.err_id', index=3,
+      number=4, type=17, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_msg', full_name='linker.trader.GatewayInstrument.err_msg', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='instruments', full_name='linker.trader.GatewayInstrument.instruments', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2605,
+  serialized_end=2765,
+)
+
+
+_RTNINSTRUMENT = _descriptor.Descriptor(
+  name='RtnInstrument',
+  full_name='linker.trader.RtnInstrument',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.RtnInstrument.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.RtnInstrument.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.RtnInstrument.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_id', full_name='linker.trader.RtnInstrument.order_id', index=3,
+      number=4, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ExchangeID', full_name='linker.trader.RtnInstrument.ExchangeID', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='OpenDate', full_name='linker.trader.RtnInstrument.OpenDate', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ExpireDate', full_name='linker.trader.RtnInstrument.ExpireDate', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='InstrumentID', full_name='linker.trader.RtnInstrument.InstrumentID', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='long_margin_ratio', full_name='linker.trader.RtnInstrument.long_margin_ratio', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='short_margin_ratio', full_name='linker.trader.RtnInstrument.short_margin_ratio', index=9,
+      number=10, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='oper_time', full_name='linker.trader.RtnInstrument.oper_time', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2768,
+  serialized_end=3065,
+)
+
+
+_GATEWAYCOMMISSION = _descriptor.Descriptor(
+  name='GatewayCommission',
+  full_name='linker.trader.GatewayCommission',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='req_id', full_name='linker.trader.GatewayCommission.req_id', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.GatewayCommission.account_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.GatewayCommission.sub_account', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_id', full_name='linker.trader.GatewayCommission.err_id', index=3,
+      number=4, type=17, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_msg', full_name='linker.trader.GatewayCommission.err_msg', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='commissions', full_name='linker.trader.GatewayCommission.commissions', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3068,
+  serialized_end=3229,
+)
+
+
+_COMMISSIONINFO = _descriptor.Descriptor(
+  name='CommissionInfo',
+  full_name='linker.trader.CommissionInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.CommissionInfo.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.CommissionInfo.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.CommissionInfo.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ExchangeID', full_name='linker.trader.CommissionInfo.ExchangeID', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='InstrumentID', full_name='linker.trader.CommissionInfo.InstrumentID', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='open_ratio_by_money', full_name='linker.trader.CommissionInfo.open_ratio_by_money', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='open_ratio_by_volume', full_name='linker.trader.CommissionInfo.open_ratio_by_volume', index=6,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='close_ratio_by_money', full_name='linker.trader.CommissionInfo.close_ratio_by_money', index=7,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='close_ratio_by_volume', full_name='linker.trader.CommissionInfo.close_ratio_by_volume', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='close_today_ratio_by_money', full_name='linker.trader.CommissionInfo.close_today_ratio_by_money', index=9,
+      number=10, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='close_today_ratio_by_volume', full_name='linker.trader.CommissionInfo.close_today_ratio_by_volume', index=10,
+      number=11, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3232,
+  serialized_end=3565,
+)
+
+
+_GATEWAYMARGINRATE = _descriptor.Descriptor(
+  name='GatewayMarginRate',
+  full_name='linker.trader.GatewayMarginRate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='req_id', full_name='linker.trader.GatewayMarginRate.req_id', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.GatewayMarginRate.account_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.GatewayMarginRate.sub_account', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_id', full_name='linker.trader.GatewayMarginRate.err_id', index=3,
+      number=4, type=17, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='err_msg', full_name='linker.trader.GatewayMarginRate.err_msg', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='margins', full_name='linker.trader.GatewayMarginRate.margins', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3568,
+  serialized_end=3725,
+)
+
+
+_MARGINRATEINFO = _descriptor.Descriptor(
+  name='MarginRateInfo',
+  full_name='linker.trader.MarginRateInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='linker.trader.MarginRateInfo.account_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sub_account', full_name='linker.trader.MarginRateInfo.sub_account', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sender', full_name='linker.trader.MarginRateInfo.sender', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ExchangeID', full_name='linker.trader.MarginRateInfo.ExchangeID', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='InstrumentID', full_name='linker.trader.MarginRateInfo.InstrumentID', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='long_margin_by_money', full_name='linker.trader.MarginRateInfo.long_margin_by_money', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='long_margin_by_volume', full_name='linker.trader.MarginRateInfo.long_margin_by_volume', index=6,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='short_margin_by_money', full_name='linker.trader.MarginRateInfo.short_margin_by_money', index=7,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='short_margin_by_volume', full_name='linker.trader.MarginRateInfo.short_margin_by_volume', index=8,
+      number=9, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_relative', full_name='linker.trader.MarginRateInfo.is_relative', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hedge_flag', full_name='linker.trader.MarginRateInfo.hedge_flag', index=10,
+      number=11, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3728,
+  serialized_end=4059,
 )
 
 
@@ -3053,8 +3897,8 @@ _RTNORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2021,
-  serialized_end=2994,
+  serialized_start=4062,
+  serialized_end=5035,
 )
 
 
@@ -3252,8 +4096,8 @@ _RTNTRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2997,
-  serialized_end=3758,
+  serialized_start=5038,
+  serialized_end=5799,
 )
 
 
@@ -3325,8 +4169,8 @@ _GATEWAYORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3761,
-  serialized_end=3926,
+  serialized_start=5802,
+  serialized_end=5967,
 )
 
 
@@ -3363,8 +4207,8 @@ _REQORDERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3928,
-  serialized_end=3976,
+  serialized_start=5969,
+  serialized_end=6017,
 )
 
 
@@ -3415,8 +4259,8 @@ _REQPOSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3978,
-  serialized_end=4064,
+  serialized_start=6019,
+  serialized_end=6105,
 )
 
 
@@ -3614,8 +4458,8 @@ _POSITIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4067,
-  serialized_end=4769,
+  serialized_start=6108,
+  serialized_end=6810,
 )
 
 
@@ -3680,8 +4524,8 @@ _GATEWAYPOSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4772,
-  serialized_end=4927,
+  serialized_start=6813,
+  serialized_end=6968,
 )
 
 
@@ -3732,8 +4576,8 @@ _REQACCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4929,
-  serialized_end=5014,
+  serialized_start=6970,
+  serialized_end=7055,
 )
 
 
@@ -3910,8 +4754,8 @@ _RSPACCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5017,
-  serialized_end=5576,
+  serialized_start=7058,
+  serialized_end=7617,
 )
 
 
@@ -3962,8 +4806,8 @@ _REQACTIVEORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5578,
-  serialized_end=5668,
+  serialized_start=7619,
+  serialized_end=7709,
 )
 
 
@@ -4021,8 +4865,8 @@ _REQCANCELACTIVEORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5670,
-  serialized_end=5792,
+  serialized_start=7711,
+  serialized_end=7833,
 )
 
 
@@ -4066,8 +4910,8 @@ _RSPCANCELACTIVEORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5794,
-  serialized_end=5870,
+  serialized_start=7835,
+  serialized_end=7911,
 )
 
 
@@ -4118,8 +4962,8 @@ _REQTRADESTODAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5872,
-  serialized_end=5961,
+  serialized_start=7913,
+  serialized_end=8002,
 )
 
 
@@ -4191,8 +5035,8 @@ _GATEWAYTRADES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5964,
-  serialized_end=6129,
+  serialized_start=8005,
+  serialized_end=8170,
 )
 
 
@@ -4243,8 +5087,8 @@ _REQHISTORYTRADES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6131,
-  serialized_end=6222,
+  serialized_start=8172,
+  serialized_end=8263,
 )
 
 
@@ -4309,8 +5153,8 @@ _RSPHISTORYTRADES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6225,
-  serialized_end=6374,
+  serialized_start=8266,
+  serialized_end=8415,
 )
 
 
@@ -4340,8 +5184,8 @@ _REQPARAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6376,
-  serialized_end=6410,
+  serialized_start=8417,
+  serialized_end=8451,
 )
 
 
@@ -4385,8 +5229,8 @@ _RSPPARAMINFO_PARAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6510,
-  serialized_end=6572,
+  serialized_start=8551,
+  serialized_end=8613,
 )
 
 _RSPPARAMINFO = _descriptor.Descriptor(
@@ -4422,8 +5266,8 @@ _RSPPARAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6413,
-  serialized_end=6572,
+  serialized_start=8454,
+  serialized_end=8613,
 )
 
 
@@ -4495,8 +5339,8 @@ _REQFUNDTRANSFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6575,
-  serialized_end=6760,
+  serialized_start=8616,
+  serialized_end=8801,
 )
 
 
@@ -4547,8 +5391,8 @@ _REQFUNDTRANSFERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6762,
-  serialized_end=6859,
+  serialized_start=8803,
+  serialized_end=8900,
 )
 
 
@@ -4606,8 +5450,8 @@ _FUNDTRANSFERINFOONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6862,
-  serialized_end=7081,
+  serialized_start=8903,
+  serialized_end=9122,
 )
 
 
@@ -4679,8 +5523,8 @@ _RSPFUNDTRANSFERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7084,
-  serialized_end=7293,
+  serialized_start=9125,
+  serialized_end=9334,
 )
 
 
@@ -4766,8 +5610,8 @@ _REQFUNDTRANSFROMBANKTOFUTURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7296,
-  serialized_end=7498,
+  serialized_start=9337,
+  serialized_end=9539,
 )
 
 
@@ -4867,8 +5711,8 @@ _FUNDTRANSFROMBANKTOFUTUREONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7501,
-  serialized_end=7826,
+  serialized_start=9542,
+  serialized_end=9867,
 )
 
 
@@ -4940,8 +5784,8 @@ _RSPFUNDTRANSFROMBANKTOFUTURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7829,
-  serialized_end=8056,
+  serialized_start=9870,
+  serialized_end=10097,
 )
 
 
@@ -4992,8 +5836,8 @@ _REQIPOINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8058,
-  serialized_end=8143,
+  serialized_start=10099,
+  serialized_end=10184,
 )
 
 
@@ -5065,8 +5909,8 @@ _IPOINFOONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8146,
-  serialized_end=8342,
+  serialized_start=10187,
+  serialized_end=10383,
 )
 
 
@@ -5138,8 +5982,8 @@ _RSPIPOINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8345,
-  serialized_end=8536,
+  serialized_start=10386,
+  serialized_end=10577,
 )
 
 
@@ -5190,8 +6034,8 @@ _REQIPOQUOTAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8538,
-  serialized_end=8628,
+  serialized_start=10579,
+  serialized_end=10669,
 )
 
 
@@ -5235,8 +6079,8 @@ _IPOQUOTAINFOONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8630,
-  serialized_end=8731,
+  serialized_start=10671,
+  serialized_end=10772,
 )
 
 
@@ -5308,8 +6152,8 @@ _RSPIPOQUOTAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8734,
-  serialized_end=8935,
+  serialized_start=10775,
+  serialized_end=10976,
 )
 
 
@@ -5353,8 +6197,8 @@ _REQCREDITFUNDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8937,
-  serialized_end=9013,
+  serialized_start=10978,
+  serialized_end=11054,
 )
 
 
@@ -5447,8 +6291,8 @@ _RSPCREDITFUNDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9016,
-  serialized_end=9231,
+  serialized_start=11057,
+  serialized_end=11272,
 )
 
 
@@ -5492,8 +6336,8 @@ _REQCREDITACTIVECONTRACTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9233,
-  serialized_end=9316,
+  serialized_start=11274,
+  serialized_end=11357,
 )
 
 
@@ -5621,8 +6465,8 @@ _CREDITCONTRACT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9319,
-  serialized_end=9897,
+  serialized_start=11360,
+  serialized_end=11938,
 )
 
 
@@ -5694,8 +6538,8 @@ _RSPCREDITACTIVECONTRACTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9900,
-  serialized_end=10109,
+  serialized_start=11941,
+  serialized_end=12150,
 )
 
 
@@ -5753,8 +6597,8 @@ _REQCREDITTICKERASSIGNINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10112,
-  serialized_end=10255,
+  serialized_start=12153,
+  serialized_end=12296,
 )
 
 
@@ -5812,8 +6656,8 @@ _CREDITTICKERASSIGNINFOONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10258,
-  serialized_end=10401,
+  serialized_start=12299,
+  serialized_end=12442,
 )
 
 
@@ -5885,8 +6729,8 @@ _RSPCREDITTICKERASSIGNINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10404,
-  serialized_end=10625,
+  serialized_start=12445,
+  serialized_end=12666,
 )
 
 
@@ -5944,8 +6788,8 @@ _REQCREDITEXCESSSTOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10628,
-  serialized_end=10766,
+  serialized_start=12669,
+  serialized_end=12807,
 )
 
 
@@ -5996,8 +6840,8 @@ _CREDITEXCESSSTOCKONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10769,
-  serialized_end=10911,
+  serialized_start=12810,
+  serialized_end=12952,
 )
 
 
@@ -6069,8 +6913,8 @@ _RSPCREDITEXCESSSTOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10914,
-  serialized_end=11126,
+  serialized_start=12955,
+  serialized_end=13167,
 )
 
 _REQORDERINSERT.fields_by_name['exchange'].enum_type = _EXCHANGE
@@ -6081,9 +6925,21 @@ _REQORDERINSERT.fields_by_name['side'].enum_type = _SIDE
 _REQORDERINSERT.fields_by_name['margin_mode'].enum_type = _MARGINMODE
 _REQORDERINSERT.fields_by_name['repay_type'].enum_type = _CREDITREPAYTYPE
 _REQORDERINSERT.fields_by_name['currency'].enum_type = _CURRENCY
+_REQORDERINSERT.fields_by_name['hedge_flag'].enum_type = _HEDGEFLAG
 _REQCREDITCASHREPAY.fields_by_name['repay_type'].enum_type = _CREDITREPAYTYPE
+_REQINSTRUMENT.fields_by_name['exchange_id'].enum_type = _EXCHANGE
+_REQMARGINRATE.fields_by_name['exchange_id'].enum_type = _EXCHANGE
+_REQMARGINRATE.fields_by_name['hedge_flag'].enum_type = _HEDGEFLAG
 _RTNCREDITEXTENDDEBTDATE.fields_by_name['oper_status'].enum_type = _CREDITDEBTEXTENDOPERSTATUS
 _RTNCREDITEXTENDDEBTDATE.fields_by_name['oper_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_GATEWAYINSTRUMENT.fields_by_name['instruments'].message_type = _RTNINSTRUMENT
+_RTNINSTRUMENT.fields_by_name['ExchangeID'].enum_type = _EXCHANGE
+_RTNINSTRUMENT.fields_by_name['oper_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_GATEWAYCOMMISSION.fields_by_name['commissions'].message_type = _COMMISSIONINFO
+_COMMISSIONINFO.fields_by_name['ExchangeID'].enum_type = _EXCHANGE
+_GATEWAYMARGINRATE.fields_by_name['margins'].message_type = _MARGINRATEINFO
+_MARGINRATEINFO.fields_by_name['ExchangeID'].enum_type = _EXCHANGE
+_MARGINRATEINFO.fields_by_name['hedge_flag'].enum_type = _HEDGEFLAG
 _RTNORDER.fields_by_name['exchange'].enum_type = _EXCHANGE
 _RTNORDER.fields_by_name['offset_flag'].enum_type = _OFFSETFLAG
 _RTNORDER.fields_by_name['order_status'].enum_type = _ORDERSTATUS
@@ -6167,8 +7023,18 @@ DESCRIPTOR.message_types_by_name['ReqCreditCashRepay'] = _REQCREDITCASHREPAY
 DESCRIPTOR.message_types_by_name['RspCreditCashRepay'] = _RSPCREDITCASHREPAY
 DESCRIPTOR.message_types_by_name['RtnCreditCashRepay'] = _RTNCREDITCASHREPAY
 DESCRIPTOR.message_types_by_name['ReqCreditExtendDebtDate'] = _REQCREDITEXTENDDEBTDATE
+DESCRIPTOR.message_types_by_name['ReqInstrument'] = _REQINSTRUMENT
+DESCRIPTOR.message_types_by_name['ReqCommission'] = _REQCOMMISSION
+DESCRIPTOR.message_types_by_name['ReqMarginRate'] = _REQMARGINRATE
 DESCRIPTOR.message_types_by_name['RspCreditExtendDebtDate'] = _RSPCREDITEXTENDDEBTDATE
+DESCRIPTOR.message_types_by_name['RspInstrument'] = _RSPINSTRUMENT
 DESCRIPTOR.message_types_by_name['RtnCreditExtendDebtDate'] = _RTNCREDITEXTENDDEBTDATE
+DESCRIPTOR.message_types_by_name['GatewayInstrument'] = _GATEWAYINSTRUMENT
+DESCRIPTOR.message_types_by_name['RtnInstrument'] = _RTNINSTRUMENT
+DESCRIPTOR.message_types_by_name['GatewayCommission'] = _GATEWAYCOMMISSION
+DESCRIPTOR.message_types_by_name['CommissionInfo'] = _COMMISSIONINFO
+DESCRIPTOR.message_types_by_name['GatewayMarginRate'] = _GATEWAYMARGINRATE
+DESCRIPTOR.message_types_by_name['MarginRateInfo'] = _MARGINRATEINFO
 DESCRIPTOR.message_types_by_name['RtnOrder'] = _RTNORDER
 DESCRIPTOR.message_types_by_name['RtnTrade'] = _RTNTRADE
 DESCRIPTOR.message_types_by_name['GatewayOrders'] = _GATEWAYORDERS
@@ -6233,6 +7099,7 @@ DESCRIPTOR.enum_types_by_name['CreditRepayType'] = _CREDITREPAYTYPE
 DESCRIPTOR.enum_types_by_name['CreditContractType'] = _CREDITCONTRACTTYPE
 DESCRIPTOR.enum_types_by_name['CreditContractProp'] = _CREDITCONTRACTPROP
 DESCRIPTOR.enum_types_by_name['CreditContractStatus'] = _CREDITCONTRACTSTATUS
+DESCRIPTOR.enum_types_by_name['HedgeFlag'] = _HEDGEFLAG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ReqOrderInsert = _reflection.GeneratedProtocolMessageType('ReqOrderInsert', (_message.Message,), {
@@ -6291,6 +7158,27 @@ ReqCreditExtendDebtDate = _reflection.GeneratedProtocolMessageType('ReqCreditExt
   })
 _sym_db.RegisterMessage(ReqCreditExtendDebtDate)
 
+ReqInstrument = _reflection.GeneratedProtocolMessageType('ReqInstrument', (_message.Message,), {
+  'DESCRIPTOR' : _REQINSTRUMENT,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.ReqInstrument)
+  })
+_sym_db.RegisterMessage(ReqInstrument)
+
+ReqCommission = _reflection.GeneratedProtocolMessageType('ReqCommission', (_message.Message,), {
+  'DESCRIPTOR' : _REQCOMMISSION,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.ReqCommission)
+  })
+_sym_db.RegisterMessage(ReqCommission)
+
+ReqMarginRate = _reflection.GeneratedProtocolMessageType('ReqMarginRate', (_message.Message,), {
+  'DESCRIPTOR' : _REQMARGINRATE,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.ReqMarginRate)
+  })
+_sym_db.RegisterMessage(ReqMarginRate)
+
 RspCreditExtendDebtDate = _reflection.GeneratedProtocolMessageType('RspCreditExtendDebtDate', (_message.Message,), {
   'DESCRIPTOR' : _RSPCREDITEXTENDDEBTDATE,
   '__module__' : 'message_pb2'
@@ -6298,12 +7186,61 @@ RspCreditExtendDebtDate = _reflection.GeneratedProtocolMessageType('RspCreditExt
   })
 _sym_db.RegisterMessage(RspCreditExtendDebtDate)
 
+RspInstrument = _reflection.GeneratedProtocolMessageType('RspInstrument', (_message.Message,), {
+  'DESCRIPTOR' : _RSPINSTRUMENT,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.RspInstrument)
+  })
+_sym_db.RegisterMessage(RspInstrument)
+
 RtnCreditExtendDebtDate = _reflection.GeneratedProtocolMessageType('RtnCreditExtendDebtDate', (_message.Message,), {
   'DESCRIPTOR' : _RTNCREDITEXTENDDEBTDATE,
   '__module__' : 'message_pb2'
   # @@protoc_insertion_point(class_scope:linker.trader.RtnCreditExtendDebtDate)
   })
 _sym_db.RegisterMessage(RtnCreditExtendDebtDate)
+
+GatewayInstrument = _reflection.GeneratedProtocolMessageType('GatewayInstrument', (_message.Message,), {
+  'DESCRIPTOR' : _GATEWAYINSTRUMENT,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.GatewayInstrument)
+  })
+_sym_db.RegisterMessage(GatewayInstrument)
+
+RtnInstrument = _reflection.GeneratedProtocolMessageType('RtnInstrument', (_message.Message,), {
+  'DESCRIPTOR' : _RTNINSTRUMENT,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.RtnInstrument)
+  })
+_sym_db.RegisterMessage(RtnInstrument)
+
+GatewayCommission = _reflection.GeneratedProtocolMessageType('GatewayCommission', (_message.Message,), {
+  'DESCRIPTOR' : _GATEWAYCOMMISSION,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.GatewayCommission)
+  })
+_sym_db.RegisterMessage(GatewayCommission)
+
+CommissionInfo = _reflection.GeneratedProtocolMessageType('CommissionInfo', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONINFO,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.CommissionInfo)
+  })
+_sym_db.RegisterMessage(CommissionInfo)
+
+GatewayMarginRate = _reflection.GeneratedProtocolMessageType('GatewayMarginRate', (_message.Message,), {
+  'DESCRIPTOR' : _GATEWAYMARGINRATE,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.GatewayMarginRate)
+  })
+_sym_db.RegisterMessage(GatewayMarginRate)
+
+MarginRateInfo = _reflection.GeneratedProtocolMessageType('MarginRateInfo', (_message.Message,), {
+  'DESCRIPTOR' : _MARGINRATEINFO,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:linker.trader.MarginRateInfo)
+  })
+_sym_db.RegisterMessage(MarginRateInfo)
 
 RtnOrder = _reflection.GeneratedProtocolMessageType('RtnOrder', (_message.Message,), {
   'DESCRIPTOR' : _RTNORDER,
